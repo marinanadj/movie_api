@@ -1,138 +1,270 @@
 const express = require('express'),
-  morgan = require('morgan'),
-  fs = require('fs'),
-  path = require('path');
+      bodyParser = require('body-parser'),
+      uuid = require('uuid'),
+      morgan = require('morgan');
+const { send } = require('process');
+      mongoose = require('mongoose'),
+      Models = require('./models.js');
+
+
+    
+          
+            
+    
+
+          
+          
+            
+    
+
+          
+    
+    @@ -235,8 +236,8 @@ app.get('/movies/:Title', (req, res) => {
+  
+const Movies = Models.Movie,
+       Users = Models.User;
+mongoose.connect('mongodb://localhost:27017/myFlixDB', { useNewUrlParser: true, useUnifiedTopology: true });
+      
 const app = express();
-//setting up logging stream
-const accessLogStream = fs.createWriteStream(path.join(__dirname, 'log.txt'), {
-  flags: 'a',
-});
-//top 10 movies according to IMDB
-const topMovies = [
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+ 
+app.use(morgan('common')); //add morgan middlewar library
+let users = [
   {
-    title: 'The Shawshank Redemption',
-    director: 'Frank Darabont',
-    stars: ['Tim Robbins', 'Morgan Freeman', 'Bob Gunton'],
-    genre: 'Drama',
+    id: 1,
+    username: "dugi",
+    email: "dugi380@yahoo.com",
+    password: "0000!",
+    birthday: "17/04/1973",
+    favorites: [],
   },
   {
-    title: 'The Godfather',
-    director: 'Frances Ford Coppola',
-    stars: ['Marlon Brando', 'Al Pacino', 'James Caan'],
-    genre: 'Crime Drama',
-  },
-  {
-    title: 'The Dark Knight',
-    director: 'Christopher Nolan',
-    stars: ['Christian Bale', 'Heath Ledger', 'Aaron Eckhart'],
-    genre: 'Action',
-  },
-  {
-    title: 'The Godfather: Part II',
-    director: 'Francis Ford Coppola',
-    stars: ['Al Pacino', 'Robert De Niro', 'Robert Duvall'],
-    genre: 'Crime Drama',
-  },
-  {
-    title: '12 Angry Men',
-    director: 'Sidney Lumet',
-    stars: ['Henry Fonda', 'Lee J. Cobb', 'Martin Balsam'],
-    genre: 'Drama',
-  },
-  {
-    title: "Schindler's List",
-    director: 'Steven Spielberg',
-    stars: ['Liam Neeson', 'Ralph Fiennes', 'Ben Kingsley'],
-    genre: 'Historical Drama',
-  },
-  {
-    title: 'The Lord of the Rings: The Return of the King',
-    director: 'Peter Jackson',
-    stars: ['Elijah Wood', 'Viggo Mortensen', 'Ian McKellen'],
-    genre: 'Fantasy',
-  },
-  {
-    title: 'Pulp Fiction',
-    director: 'Quentin Tarantino',
-    stars: ['John Travolta', 'Uma Thurman', 'Samuel L. Jackson'],
-    genre: 'Crime Drama',
-  },
-  {
-    title: 'The Lord of the Rings: The Fellowship of the Ring',
-    director: 'Peter Jackson',
-    stars: ['Elijah Wood', 'Orlando Bloom', 'Ian McKellen'],
-    genre: 'Fantasy',
-  },
-  {
-    title: 'The Good, the Bad and the Ugly',
-    director: 'Sergio Leone',
-    stars: ['Clint Eastwood', 'Eli Wallach', 'Lee Van Cleef'],
-    genre: 'Western',
-  },
+    id: 2,
+    username: "Mila",
+    email: "marinanadj7@yahoo.com",
+    password: "0000",
+    birthday: "07/03/1988",
+    favorites: [],
+  }
 ];
-//middleware - logging, static public folder, error logging
-app.use(morgan('combined', { stream: accessLogStream }));
-app.use(express.static('public'));
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send('something is broken here');
-});
-app.get('/', (req, res) => {
-  res.send('Welcome to the App!');
-});
-app.get('/movies', (req, res) => {
-  res.json(topMovies);
-});
-app.get('/movies/:title', (req, res) => {
-  let movie = topMovies.find((movie) => {
-    return movie.title === req.params.title;
-  });
-  if (movie) {
-    res.json(movie);
-  } else {
-    res.status(400).send('Movie not Found');
+let movies = [
+  {
+    Title: "Interstellar",
+    Description: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+    Genre: {
+      Name: "Sci-Fi",
+      Description: " speculative fiction which typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life. It has been called the literature of ideas, and it often explores the potential consequences of scientific, social, and technological innovations."
+    },
+  
+    Director: {
+      Name: "Christopher Nolan",
+      Bio: "Christopher Nolan is an American director, producer, and screenwriter.",
+      Birth: "1970-07-30"
+    },
+    ImagePath: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRf61mker2o4KH3CbVE7Zw5B1-VogMH8LfZHEaq3UdCMLxARZAB",
+    Featured: true
+  },
+  {
+    Title: "The Hobbit",
+    Description: "A reluctant Hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home, and the gold within it from the dragon Smaug.",
+    Genre: {
+      Name: "Fantasy",
+      Description: "speculative fiction involving magical elements, typically set in a fictional universe and sometimes inspired by mythology and folklore. Its roots are in oral traditions, which then became fantasy literature and drama. From the twentieth century, it has expanded further into various media, including film, television, graphic novels, manga, animated movies and video games."
+    },
+  
+    Director: {
+      Name: "Peter Jackson",
+      Bio: "Peter Jackson is an American director, producer, and screenwriter.",
+      Birth: "1961-10-31"
+    },
+    ImagePath: "https://resizing.flixster.com/bvVhpq1XDXo409UQ07ZgFrsIlZ0=/206x305/v2/https://flxt.tmsimg.com/assets/p9458059_p_v8_ac.jpg",
+    Featured: true
+  },
+  {
+    Title: "Inception",
+    Description: "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+    Genre: {
+      Name: "Sci-Fi",
+      Description: " speculative fiction which typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life. It has been called the literature of ideas, and it often explores the potential consequences of scientific, social, and technological innovations."
+    },
+  
+    Director: {
+      Name: "Christopher Nolan",
+      Bio: "Christopher Nolan is an American director, producer, and screenwriter.",
+      Birth: "1970-07-30"
+    },
+    ImagePath: "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg",
+    Featured: true
   }
+];
+// Gets the list of data about ALL users
+app.get('/users', (req, res) => {
+  Users.find()
+    .then((users) => {
+      res.status(201).json(users);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send('Error: ' + err);
+    });
 });
-app.get('/movies/genre/:title', (req, res) => {
-  let movie = topMovies.find((movie) => {
-    return movie.title === req.params.title;
-  });
-  if (movie) {
-    res.status(200).send(`${req.params.title} is a ${movie.genre}`);
-  } else {
-    res.status(400).send('Movie not Found');
-  }
+// Gets the data about a single user, by name
+app.get('/users/:Username', (req, res) => {
+  Users.findOne({ Username: req.params.Username })
+    .then((user) => {
+      res.json(user);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send('Error: ' + err);
+    });
 });
-app.get('/directors/:name', (req, res) => {
-  res.status(200).send(`Request recived for ${req.params.name}`);
-});
+//creat new user
 app.post('/users', (req, res) => {
-  res.status(200).send(`Request recived for new user`);
+  Users.findOne({ Username: req.body.Username })
+    .then((user) => {
+      if (user) {
+        return res.status(400).send(req.body.Username + 'already exists');
+      } else {
+        Users
+          .create({
+            Username: req.body.Username,
+            Password: req.body.Password,
+            Email: req.body.Email,
+            Birthday: req.body.Birthday
+          })
+          .then((user) =>{res.status(201).json(user) })
+        .catch((error) => {
+          console.error(error);
+          res.status(500).send('Error: ' + error);
+        })
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+      res.status(500).send('Error: ' + error);
+    });
 });
-app.put('/users/:name', (req, res) => {
-  res.status(200).send(`Request recived to update name for ${req.params.name}`);
+//UPDATE user mongoose
+app.put('/users/:Username', (req, res) => {
+  Users.findOneAndUpdate({ Username: req.params.Username }, { $set:
+    {
+      Username: req.body.Username,
+      Password: req.body.Password,
+      Email: req.body.Email,
+      Birthday: req.body.Birthday
+    }
+  },
+  { new: true }, // This line makes sure that the updated document is returned
+  (err, updatedUser) => {
+    if(err) {
+      console.error(err);
+      res.status(500).send('Error: ' + err);
+    } else {
+      res.json(updatedUser);
+    }
+  });
 });
-app.post('/users/:id/favorites/:title', (req, res) => {
-  res
-    .status(200)
-    .send(
-      `Adding ${req.params.title} to favorites for user ID ${req.params.id}`
-    );
+//add movie to users favorite
+app.post('/users/:Username/movies/:MovieID', (req, res) => {
+  Users.findOneAndUpdate({ Username: req.params.Username }, {
+     $push: { FavoriteMovies: req.params.MovieID }
+   },
+   { new: true }, // This line makes sure that the updated document is returned
+  (err, updatedUser) => {
+    if (err) {
+      console.error(err);
+      res.status(500).send('Error: ' + err);
+    } else {
+      res.json(updatedUser);
+    }
+  });
 });
-app.delete('/users/:id/favorites/:title', (req, res) => {
-  res
-    .status(200)
-    .send(
-      `Deleteing ${req.params.title} from favorites for user ID ${req.params.id}`
-    );
+// Deletes a user from our list by username
+app.delete('/users/:Username', (req, res) => {
+  Users.findOneAndRemove({ Username: req.params.Username })
+    .then((user) => {
+      if (!user) {
+        res.status(400).send(req.params.Username + ' was not found');
+      } else {
+        res.status(200).send(req.params.Username + ' was deleted.');
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send('Error: ' + err);
+    });
 });
-app.delete('/users/:name', (req, res) => {
-  res.status(200).send(`Deleting user ${req.params.name}`);
+// GET requests
+app.get('/', (req, res) => {
+  res.send('Welcome to my movies club!');
 });
-app.get('/documentation', (req, res) => {
-  res.sendFile(__dirname + '/public/documentation.html');
+app.get('/documentation', (req, res) => {                  
+  res.sendFile('public/documentation.html', { root: __dirname });
+});
+//GEt all movies
+app.get('/movies', (req, res) => {
+  Movies.find()
+    .then((movies) => {
+      res.status(201).json(movies);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send('Error: ' + err);
+    });
+});
+app.get('/movies/:Title', (req, res) => {
+  Movies.findOne({ Title: req.params.Title })
+    .then((movie) => {
+      res.json(movie);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send('Error: ' + err);
+    });
 });
 
+//(Read) responds with a json of the specific movie asked for genre
+app.get("movies/genre/:genreName", (req, res) => {
+    genre.find({ "Genre.Name": req.params.Name })
+      .then((genre) => {
+        res.json(genre);
+      })
+
+    
+        
+          
+    
+
+        
+    
+    @@ -248,7 +249,7 @@ app.get("/genre/:Name", (req, res) => {
+  
+      .catch((err) => {
+        console.error(err);
+        res.status(500).send("Error " + err);
+      });
+  }
+);
+// app.get('/movies/genre/:name', (req, res) => {
+//   const { genreName } = req.params;
+//   const genre = movies.find( movie => movie.Genre.Name === genreName).Genre;
+
+//   if (genre) {
+//     res.status (200).json(genre);
+
+  
+//   } else {
+//     res.status(400).send('no such genre')
+//   }
+// })
+app.use(express.static('public')); //serves “documentation.html” file from the public folder
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
+  });
+// listen for requests
 app.listen(8080, () => {
-  console.log('listening on port 8080');
+  console.log('Your app is listening on port 8080.');
 });

@@ -1,6 +1,0 @@
-{"_id":{"$oid":"6277b0bb4f7a9364538a75f4"},"name":"Maria Manson","password":"klo788","email":"maria.manson@gmail.com","dateOfBirth":"1980/01/02","favoriteMovies":[]}
-{"_id":{"$oid":"6277b0c94f7a9364538a75f5"},"name":"Ana Smith","password":"ups88","email":"ana.smitt@yahoo.com","dateOfBirth":"1988/02/05"}
-{"_id":{"$oid":"6277b0d74f7a9364538a75f6"},"name":"Melani Cruz","password":"upsmc5588","email":"melc@yahoo.com","Birthday":{"$date":"1981-09-01T00:00:00Z"},"favoriteMovies":["We are not angels"]}
-{"_id":{"$oid":"6277b0f64f7a9364538a75f7"},"name":"Fiona Cruz","password":"ups88","email":"fcruz@yahoo.com","Birthday":{"$date":"1981-08-01T00:00:00Z"}}
-{"_id":{"$oid":"6277b10b4f7a9364538a75f8"},"name":"David Beckham","password":"beckhampower55","email":"davidb@yahoo.com","Birthday":{"$date":"1985-10-15T00:00:00Z"}}
-{"_id":{"$oid":"6277eaf63002ed4204b4ca92"},"name":"Maria Manson","password":"klo788","email":"maria.manson@gmail.com","dateOfBirth":"1980/01/02","favoriteMovies":[]}

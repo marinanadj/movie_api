@@ -21,7 +21,7 @@
     "express": "^4.17.3",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.21",
-    "mongoose": "^6.3.0",
+    "mongoose": "^6.3.3",
     "morgan": "^1.10.0",
     "passport": "^0.5.2",
     "passport-jwt": "^4.0.0",
@@ -29,5 +29,8 @@
     "save": "^2.5.0",
     "uuid": "^8.3.2"
   },
-  "keywords": []
+  "keywords": [],
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
 }

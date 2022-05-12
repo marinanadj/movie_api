@@ -1,0 +1,542 @@
+show dbs
+db
+db.createCollection("Movies")
+db.createCollection("movies")
+var movie1 =  {     Title: "Interstellar",     Description: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",     Genre: {       Name: "Sci-Fi",       Description: " speculative fiction which typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life. It has been called the literature of ideas, and it often explores the potential consequences of scientific, social, and technological innovations."     },        Director: {       Name: "Christopher Nolan",       Bio: "Christopher Nolan is an American director, producer, and screenwriter.",       Birth: "1970-07-30"     },     ImagePath: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRf61mker2o4KH3CbVE7Zw5B1-VogMH8LfZHEaq3UdCMLxARZAB",     Featured: true   },  db.movies.insertOne(movie1)
+db.createCollection("movies")
+var movie1 =  {     Title: "Interstellar",     Description: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",     Genre: {       Name: "Sci-Fi",       Description: " speculative fiction which typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life. It has been called the literature of ideas, and it often explores the potential consequences of scientific, social, and technological innovations."     },        Director: {       Name: "Christopher Nolan",       Bio: "Christopher Nolan is an American director, producer, and screenwriter.",       Birth: "1970-07-30"     },     ImagePath: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRf61mker2o4KH3CbVE7Zw5B1-VogMH8LfZHEaq3UdCMLxARZAB",     Featured: true   },  db.movies.insertOne(movie1)
+var movie1 =  {     Title: "Interstellar",     Description: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",     Genre: {       Name: "Sci-Fi",       Description: " speculative fiction which typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life. It has been called the literature of ideas, and it often explores the potential consequences of scientific, social, and technological innovations."     },        Director: {       Name: "Christopher Nolan",       Bio: "Christopher Nolan is an American director, producer, and screenwriter.",       Birth: "1970-07-30"     },     ImagePath: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRf61mker2o4KH3CbVE7Zw5B1-VogMH8LfZHEaq3UdCMLxARZAB",     Featured: true   },  db.movies.insertOne(movie1)
+db.createCollection("movies")
+var movie1 = {   Title: " We are not angels ",   Description: " Angel and the devil fight for the soul of a Belgrade playboy who made a young girl pregnant.",   Genre: {     Name: " Comedy ",     Description: "Genre of fiction that consists of discourses or works intended to be humorous or amusing by inducing laughter, especially in theatre, film, stand-up comedy, television, radio, books, or any other entertainment medium."   },   Director: {     Name: " Srdjan Dragojevic ",     Bio: " Degree in Clinical Psychology and in Film Directing. Author of the 8 feature films and 8 books for grown-up' and the kids..",     Birth: " 1963-01-01 ",   },   ImagePath: " https://www.imdb.com/title/tt0104860/mediaviewer/rm1608639488/ ",   Featured: true }
+db.movies.insertOne(movie1)
+show dbs
+use movies
+var movie1 = { Title: "Interstellar", Description: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.", Genre: { Name: "Sci-Fi",  Description: " speculative fiction which typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life. It has been called the literature of ideas, and it often explores the potential consequences of scientific, social, and technological innovations."     }, Director: { Name: "Christopher Nolan", Bio: "Christopher Nolan is an American director, producer, and screenwriter.", Birth: "1970-07-30"     },  ImagePath: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRf61mker2o4KH3CbVE7Zw5B1-VogMH8LfZHEaq3UdCMLxARZAB", Featured: true   },  db.movies.insertOne(movie1)
+var movie2 = { Title: "The Hobbit",     Description: "A reluctant Hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home, and the gold within it from the dragon Smaug.",     Genre: {       Name: "Fantasy",       Description: "speculative fiction involving magical elements, typically set in a fictional universe and sometimes inspired by mythology and folklore. Its roots are in oral traditions, which then became fantasy literature and drama. From the twentieth century, it has expanded further into various media, including film, television, graphic novels, manga, animated movies and video games."     },        Director: {       Name: "Peter Jackson",       Bio: "Peter Jackson is an American director, producer, and screenwriter.",       Birth: "1961-10-31"     },     ImagePath: "https://resizing.flixster.com/bvVhpq1XDXo409UQ07ZgFrsIlZ0=/206x305/v2/https://flxt.tmsimg.com/assets/p9458059_p_v8_ac.jpg",     Featured: true   }, db.movies.insertOne(movie2)
+db
+use [movies]
+var movie1 =  {     Title: "The Hobbit",     Description: "A reluctant Hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home, and the gold within it from the dragon Smaug.",     Genre: {       Name: "Fantasy",       Description: "speculative fiction involving magical elements, typically set in a fictional universe and sometimes inspired by mythology and folklore. Its roots are in oral traditions, which then became fantasy literature and drama. From the twentieth century, it has expanded further into various media, including film, television, graphic novels, manga, animated movies and video games."     },        Director: {       Name: "Peter Jackson",       Bio: "Peter Jackson is an American director, producer, and screenwriter.",       Birth: "1961-10-31"     },     ImagePath: "https://resizing.flixster.com/bvVhpq1XDXo409UQ07ZgFrsIlZ0=/206x305/v2/https://flxt.tmsimg.com/assets/p9458059_p_v8_ac.jpg",     Featured: true   }, db.movies.insertOne(movie1)
+var movie3 = {         Title: 'Zona Zamfirova',         Description: 'A local rich man daughter, and the vicissitudes of her affair with Mane (Vojin Cetkovic), an ordinary goldsmith. As it was undesirable for the daughter of a rich man to marry a craftsman, the two are at first divided, with the possibility of Zona marrying the son of other rich people, Manulac. Everything is, however, changed as Mane organizes a successful conspiracy to keep Zona for himself.',         Director: {             Name:'Zdravko Sotra',             Bio: 'Serbian film and television director and screenwriter. Sotra graduated from the Faculty of Dramatic Arts, University of Arts in Belgrade with a degree in film directing. He began his professional career at TV Belgrade, working there since its inception.',             Birth:'1933-02-13'              } ,         Genre: {             Name:'Drama',             Description: 'Considered as a genre of poetry in general, the dramatic mode has been contrasted with the epic and the lyrical modes.',         },         ImageUrl:'https://en.wikipedia.org/wiki/Zona_Zamfirova#/media/File:Zona_Zamfirova_DVD-Cover.jpg',         Featured: true     }
+db.movies.insertOne(movie3)
+db.movies.find()
+db.[collectionName].deleteMany([condition])
+db.movies.remove({ Genre: { Name:"Zona Zamfirova "Comedy" } })
+db.movies.remove({"Title":"Zona Zamfirova"})
+db.movies.find()
+dbs
+db.createCollection("movies")
+use movies
+var movie1 = {   Title: "Interstellar",   Description: " A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",   Genre: {     Name: " Sci-Fi ",     Description: "speculative fiction which typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life. It has been called the literature of ideas, and it often explores the potential consequences of scientific, social, and technological innovations."   },   Director: {     Name: " Christopher Nolan ",     Bio: "Christopher Nolan is an American director, producer, and screenwriter.",     Birth: " 1970-07-30 ",   },   ImagePath: " https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRf61mker2o4KH3CbVE7Zw5B1-VogMH8LfZHEaq3UdCMLxARZAB ",   Featured: true }
+db.movies.insertOne(movie1)
+var movie2 = {         Title: 'The Hobbit',         Description: 'A reluctant Hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home, and the gold within it from the dragon Smaug.',         Director: {             Name:'Peter Jackson',             Bio: 'Peter Jackson is an American director, producer, and screenwriter.',             Birth:'1961-10-31'              } ,         Genre: {             Name:'Fantasy',             Description: 'speculative fiction involving magical elements, typically set in a fictional universe and sometimes inspired by mythology and folklore. Its roots are in oral traditions, which then became fantasy literature and drama. From the twentieth century, it has expanded further into various media, including film, television, graphic novels, manga, animated movies and video games.',         },         ImageUrl:'https://resizing.flixster.com/bvVhpq1XDXo409UQ07ZgFrsIlZ0=/206x305/v2/https://flxt.tmsimg.com/assets/p9458059_p_v8_ac.jpg',         Featured: true     }
+db.movies.insertOne(movie2)
+var movie3 = {         Title: 'Inception',         Description: 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.',         Director: {             Name:'Christopher Nolan',             Bio:'Christopher Nolan is an American director, producer, and screenwriter.',             Birth: '1970-07-30'         },         Genre: {             Name:'Sci-Fi',             Description:' speculative fiction which typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life. It has been called the literature of ideas, and it often explores the potential consequences of scientific, social, and technological innovations.',         },         ImageUrl:'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg',         Featured: true         }
+db.movies.insertOne(movie3)
+dbs
+show dbs
+var movies4 = {  Title: 'The Shawshank Redemption',         Description: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.',         Director: {             Name: 'Frank Darabont',             Bio: 'Three-time Oscar nominee Frank Darabont was born in a refugee camp in 1959 in Montbeliard, France, the son of Hungarian parents who had fled Budapest during the failed 1956 Hungarian revolution. ',             Birth: '1959-01-28',         },         Genre: {             Name:'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.',         },         ImageUrl: 'https://www.imdb.com/title/tt0111161/mediaviewer/rm10105600/',         Featured: true     }
+db.movies.insertOne(movie4)
+use movies
+var movie4 = {  Title: 'The Shawshank Redemption',         Description: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.',         Director: {             Name: 'Frank Darabont',             Bio: 'Three-time Oscar nominee Frank Darabont was born in a refugee camp in 1959 in Montbeliard, France, the son of Hungarian parents who had fled Budapest during the failed 1956 Hungarian revolution. ',             Birth: '1959-01-28',         },         Genre: {             Name:'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.',         },         ImageUrl: 'https://www.imdb.com/title/tt0111161/mediaviewer/rm10105600/',         Featured: true     }
+db.movies.insertOne(movie4)
+var movie5 = { Title: 'The Godfather',         Description: 'The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.',         Director: {             Name: 'Francis Ford Coppola',             Bio: 'Francis Ford Coppola was born in 1939 in Detroit, Michigan, but grew up in a New York suburb in a creative, supportive Italian-American family.',             Birth: '1939-07-04' ,         },         Genre: {             Name: 'Crime',             Description: 'FCrime films, in the broadest sense, are a cinematic genre inspired by and analogous to the crime fiction literary genre. Films of this genre generally involve various aspects of crime and its detection.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0068646/mediaviewer/rm746868224/',         Featured: true     }
+db.movies.insertOne(movie5)
+var movie6 = { Title: 'Schindler's List',
+Description: 'In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.',         Director: {             Name: 'Steven Spielberg',             Bio: 'One of the most influential personalities in the history of cinema, Steven Spielberg is Hollywood's best known director and one of the wealthiest filmmakers in the world.',
+Birth: '1946-12-18',         },
+Genre: {             Name: 'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.' ,         },         ImageUrl:'https://www.imdb.com/title/tt0108052/mediaviewer/rm1610023168/',         Featured: true
+}
+db.movies.insertOne(movie6)
+use movies
+var movie6 = { Title: 'Schindler's List',
+Description: 'In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.',         Director: {             Name: 'Steven Spielberg',             Bio: 'One of the most influential personalities in the history of cinema, Steven Spielberg is Hollywood's best known director and one of the wealthiest filmmakers in the world.',
+Birth: '1946-12-18',         },
+Genre: {             Name: 'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.' ,         },         ImageUrl:'https://www.imdb.com/title/tt0108052/mediaviewer/rm1610023168/',         Featured: true
+}
+db.movies.insertOne(movie6)
+use movies
+var movie6 = { Title: 'Schindler's List',
+Description: 'In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.',         Director: {             Name: 'Steven Spielberg',             Bio: 'One of the most influential personalities in the history of cinema, Steven Spielberg is Hollywood's best known director and one of the wealthiest filmmakers in the world.',
+Birth: '1946-12-18',         },
+Genre: {             Name: 'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.' ,         },         ImageUrl:'https://www.imdb.com/title/tt0108052/mediaviewer/rm1610023168/',         Featured: true
+}
+db.movies.insertOne(movie6)
+use dbs
+use movies
+var movie6 = { Title: ' Schindler's List',
+Description: 'In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.',         Director: {             Name: 'Steven Spielberg',             Bio: 'One of the most influential personalities in the history of cinema, Steven Spielberg is Hollywood's best known director and one of the wealthiest filmmakers in the world.',
+Birth: '1946-12-18' ,         },
+Genre: {             Name: 'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0108052/mediaviewer/rm1610023168/',         Featured: true
+}
+db.movies.insertOne(movie6)
+var movie 6 = {         Title: ' Pulp Fiction',         Description: 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption',         Director: {             Name: 'Quentin Tarantino',             Bio: 'Quentin Jerome Tarantino was born in Knoxville, Tennessee. His father, Tony Tarantino, is an Italian-American actor and musician from New York, and his mother, Connie (McHugh), is a nurse from Tennessee.',             Birth: '1963-03-27' ,         },         Genre: {             Name: 'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0110912/mediaviewer/rm1959546112/',         Featured: true     }
+use movies
+var movie 6 = {         Title: ' Pulp Fiction',         Description: 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption',         Director: {             Name: 'Quentin Tarantino',             Bio: 'Quentin Jerome Tarantino was born in Knoxville, Tennessee. His father, Tony Tarantino, is an Italian-American actor and musician from New York, and his mother, Connie (McHugh), is a nurse from Tennessee.',             Birth: '1963-03-27' ,         },         Genre: {             Name: 'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0110912/mediaviewer/rm1959546112/',         Featured: true     }
+use movies
+var movie6 = {         Title: ' Pulp Fiction',         Description: 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption',         Director: {             Name: 'Quentin Tarantino',             Bio: 'Quentin Jerome Tarantino was born in Knoxville, Tennessee. His father, Tony Tarantino, is an Italian-American actor and musician from New York, and his mother, Connie (McHugh), is a nurse from Tennessee.',             Birth: '1963-03-27' ,         },         Genre: {             Name: 'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0110912/mediaviewer/rm1959546112/',         Featured: true     }
+db.movies.insertOne(movie6)
+var movie7 = {         Title: 'Forrest Gump',         Description: 'The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.',         Director: {             Name: 'Robert Zemeckis',             Bio: 'A whiz-kid with special effects, Robert is from the Spielberg camp of film-making (Steven Spielberg produced many of his films). ',             Birth: '1951-05-14',         },             Name: 'Romance',             Description: 'Romance films or romance movies are romantic love stories recorded in visual media for broadcast in theaters and on TV that focus on passion, emotion, and the affectionate romantic involvement of the main characters and the journey that their love takes them through dating, courtship or marriage.',         },         ImageUrl: 'https://www.imdb.com/title/tt0109830/mediaviewer/rm1954748672/',         Featured: true
+}
+db.movies.insertOne(movie7)
+var movie7 = {         Title: 'Forrest Gump',         Description: 'The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.',}
+Director: {             Name: 'Robert Zemeckis',             Bio: 'A whiz-kid with special effects, Robert is from the Spielberg camp of film-making (Steven Spielberg produced many of his films). ',             Birth: '1951-05-14',         },             Name: 'Romance',             Description: 'Romance films or romance movies are romantic love stories recorded in visual media for broadcast in theaters and on TV that focus on passion, emotion, and the affectionate romantic involvement of the main characters and the journey that their love takes them through dating, courtship or marriage.',         },
+ImageUrl: 'https://www.imdb.com/title/tt0109830/mediaviewer/rm1954748672/',         Featured: true
+}
+db.movies.insertOne(movie7)
+var movie8 = {   Title: "Silence of the Lambs",   Description: "A young FBI cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer.",   Genre: {     Name: "Thriller",     Description: "Thriller film, also known as suspense film or suspense thriller, is a broad film genre that involves excitement and suspense in the audience."   },   Director: {     Name: "Jonathan Demme",     Bio: "Robert Jonathan Demme was an American director, producer, and screenwriter.",     Birth: "1944",     Death: "2017"   },    ImageUrl: 'https://www.imdb.com/title/tt0102926/mediaviewer/rm3242988544/',         Featured: true         }
+db.movies.insertOne(movie8)
+var movie9 = {         Title: 'Goodfellas',         Description: 'The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.',         Director: {             Name: 'Martin Scorsese',             Bio: 'He served as assistant director and an editor of the documentary Woodstock (1970) and won critical and popular acclaim for Ulice zla (1973), which first paired him with actor and frequent collaborator Robert De Niro.',             Birth: '1942-11-17' ,         },         Genre: {             Name: 'Biografy',             Description: 'A biographical film, or biopic (/ ˈbaɪoʊpɪk /; abbreviation for biographical motion picture), is a film that dramatizes the life of a non-fictional or historically -based person or people. Such films show the life of a historical person and the central character's real name is used.',
+},
+ImageUrl: 'https://www.imdb.com/title/tt0099685/mediaviewer/rm2091797760/',         Featured: true
+}
+db.movies.insertOne(movie9)
+use movies
+var movie9 = {         Title: 'Goodfellas',         Description: 'The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.',         Director: {             Name: 'Martin Scorsese',             Bio: 'He served as assistant director and an editor of the documentary Woodstock (1970) and won critical and popular acclaim for Ulice zla (1973), which first paired him with actor and frequent collaborator Robert De Niro.',             Birth: '1942-11-17' ,         },         Genre: {             Name: 'Biografy',             Description: 'A biographical film, or biopic (/ ˈbaɪoʊpɪk /; abbreviation for biographical motion picture), is a film that dramatizes the life of a non-fictional or historically -based person or people. Such films show the life of a historical person and the central character's real name is used.',
+},
+ImageUrl: 'https://www.imdb.com/title/tt0099685/mediaviewer/rm2091797760/',         Featured: true
+}
+db.movies.insertOne(movie9)
+var movie9 = {         Title: 'Goodfellas',         Description: 'The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.',         Director: {             Name: 'Martin Scorsese',             Bio: 'He served as assistant director and an editor of the documentary Woodstock (1970) and won critical and popular acclaim for Ulice zla (1973), which first paired him with actor and frequent collaborator Robert De Niro.',             Birth: '1942-11-17' ,         },         Genre: {             Name: 'Biografy',             Description: 'A biographical film is a film that dramatizes the life of a non-fictional or historically -based person or people. Such films show the life of a historical person and the central character's real name is used.',
+},
+ImageUrl: 'https://www.imdb.com/title/tt0099685/mediaviewer/rm2091797760/',         Featured: true
+}
+use movies
+var movie9 = {         Title: 'Se7en',         Description: 'Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.',         Director: {             Name: 'David Fincher',             Bio: '. When he was 18 years old he went to work for John Korty at Korty Films in Mill Valley.',             Birth: '1962-08-28' ,         },         Genre: {             Name: 'Mystery',             Description: 'A mystery film is a genre of film that revolves around the solution of a problem or a crime.',         },         ImageUrl: 'https://www.imdb.com/title/tt0114369/mediaviewer/rm3116368640/',         Featured: true         }
+db.movies.insertOne(movie9)
+var movie10 = {         Title: ' Pulp Fiction',         Description: 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption',         Director: {             Name: 'Quentin Tarantino',             Bio: 'Quentin Jerome Tarantino was born in Knoxville, Tennessee. His father, Tony Tarantino, is an Italian-American actor and musician from New York, and his mother, Connie (McHugh), is a nurse from Tennessee.',             Birth: '1963-03-27' ,         },         Genre: {             Name: 'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0110912/mediaviewer/rm1959546112/',         Featured: true     }
+db.movies.insertOne(movie10)
+let user1 = {           name: "Maria Manson",           password: "klo788",           email: "maria.manson@gmail.com",           dateOfBirth: "1980/01/02",           favoriteMovies: [],         }
+db.users.insertOne(user1)
+let user2 = {           name: "Ana Smith",           password: "ups88",           email: "ana.smitt@yahoo.com",           dateOfBirth: "1988/02/05" ,                     }
+db.users.insertOne(user2)
+let user3 = {             name: "Melani Cruz",             password: "upsmc5588",             email: 'melc@yahoo.com' ,             Birthday: new Date("1981-09-01") ,              favoriteMovies: ["We are not angels"],           }
+db.users.insertOne(user3)
+let user4 = {             name: "Fiona Cruz",             password: "ups88",             email: 'fcruz@yahoo.com' ,             Birthday: new Date("1981-08-01")           }
+db.users.insertOne(user4)
+let user5 = {             name: "David Beckham",             password: "beckhampower55",             email: 'davidb@yahoo.com' ,             }
+db.users.insertOne(user5)
+let user5 = {             name: "David Beckham",             password: "beckhampower55",             email: 'davidb@yahoo.com' ,             Birthday: new Date("1985-10-15")           }
+db.movies.find()
+db.movies.find()
+use movies
+db.movies.find()
+use movies
+db.[collectionName].find( [Drama] )
+db.[collectionName].find(Drama)
+use movies
+db.movies.findOne( { Title: "Drama" } )
+db.movies.findOne( { Genres: "Drama" } )
+use movies
+db.movies.find({"Genre.Name": "Drama"})
+use movies
+db.movies.find({"Genre.Name": "Drama"} AND {"Director.Name": "Quentin Tarantino"})
+usae movies
+use movies
+db.movies.find({"Genre.Name": "Drama"} AND {"Director.Name": "Quentin Tarantino"})
+db.movies.find({"Genre.Name": "Drama"}) AND ({"Director.Name": "Quentin Tarantino"})
+db.movies.find({"Genre.Name": "Drama"} AND {"Director.Name": "Quentin Tarantino"})
+db.movies.find({"Genre.Name": "Drama"}, {"Director.Name": "Quentin Tarantino"})
+use movies
+db.movies.find({"Genre.Name": "Drama"}, {"Director.Name": "Quentin Tarantino"})
+use movies
+show dbs
+0.000GB
+db.getCollectionNames()
+db.getCollectionNames(movies)
+ObjectId.getTimestamp()
+ObjectId(<hexadecimal>)
+do.movies.find()
+use movies
+db.movies.find()
+db.users.find()
+db.movies.update( {_id: ObjectId("6276e1cfef2f1ddb1263bb9c")}, {$set:{Description:"Interstellar is about Earth’s last chance to find a habitable planet before a lack of resources causes the human race to go extinct. The film’s protagonist is Cooper (Matthew McConaughey), a former NASA pilot who is tasked with leading a mission through a wormhole to find a habitable planet in another galaxy."}} )
+{_id: ObjectId("6276e1cfef2f1ddb1263bb9c")}, {$set:{Description:"Interstellar is about Earth’s last chance to find a habitable planet before a lack of resources causes the human race to go extinct. The film’s protagonist is Cooper (Matthew McConaughey), a former NASA pilot who is tasked with leading a mission through a wormhole to find a habitable planet in another galaxy."}}
+... )
+use movies
+{_id: ObjectId("6276e1cfef2f1ddb1263bb9c")}, {$set:{Description:"Interstellar is about Earth’s last chance to find a habitable planet before a lack of resources causes the human race to go extinct. The film’s protagonist is Cooper (Matthew McConaughey), a former NASA pilot who is tasked with leading a mission through a wormhole to find a habitable planet in another galaxy."}}
+... )
+7use movies
+use movies
+db.movies.update( {_id: ObjectId("62777aa8b41ba2c22e460d74")}, {$push:{Stars: ["Morgan Freeman","Brad Pitt"] }} )
+> db.movies.update( {_id: ObjectId("62777aa8b41ba2c22e460d74")}, {$push:{Stars: ["Morgan Freeman","Brad Pitt"] }} )
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+use movies
+> db.movies.update( {_id: ObjectId("62777aa8b41ba2c22e460d74")}, {$push:{Stars: ["Morgan Freeman","Brad Pitt"] }} )
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.movies.findOne( { Title: "The Hobbit" } )
+db.movies.findOne({ Title: "The Hobbit"})
+use movies
+db.movies.findOne({ Title: "The Hobbit"})
+use movies
+db.users.update( {_id: ObjectId("62777b44b41ba2c22e460d76")}, {$push:{FavoriteMovies: ObjectId("62777852a788af48fa59ba6f")}} )
+use movies
+db.users.update( {_id: ObjectId("62777b66b41ba2c22e460d77")}, {$push:{FavoriteMovies: ObjectId("62777487276c76260a06289c")}} )
+db.movies.remove({_id: ObjectId("62777acab41ba2c22e460d75")})
+WriteResult({ "nRemoved" : 1 })
+> db.movies.remove({_id: ObjectId("62777acab41ba2c22e460d75")})
+WriteResult({ "nRemoved" : 1 })
+use movies
+use movies
+db.movies.remove({"_id" : ObjectId("6276e335ef2f1ddb1263bb9e"),         "Title" : "Inception", )}
+use movies
+db.movies.remove({_id: ObjectId("627778eea788af48fa59ba70")})
+switched to db movies
+> db.movies.remove({_id: ObjectId("627778eea788af48fa59ba70")})
+WriteResult({ "nRemoved" : 1 })
+;
+db.movies.findOne( { _id: ObjectId("6276e28def2f1ddb1263bb9d") })
+use movies
+db.movies.findOne( { _id: ObjectId("6276e28def2f1ddb1263bb9d") })
+use movies
+db.movies.findOne( { _id: ObjectId("6276e28def2f1ddb1263bb9d") })
+use movies
+mongoexport -d name_of_database -c name_of_collection -o name_of_file.json
+mongoexport -d movies -c movies -movielist.json
+mongoexport -d myFlixDB -c users -o myFlixDBforUsers.json
+mongoexport -d myFlixDB -c movies -o myFlixDBforMovies.json
+use movies
+mongoexport -d myFlixDB -c movies -o myFlixDBforMovies.json
+shoe dbs
+use movies
+show dbs
+db
+show dbs
+[movies]  0.000GB show dbs
+[movies]  0.000GB
+use my FlixDB
+db.getCollectionNames()
+mongoexport -d myFlixDB -c movies -o myFlixDBforMovies.json
+mongoexport -d movies -c movies -o myFlixDBforMovies.json
+mongoexport -d dbshell -c movies -o myFlixDBforMovies.json
+db
+use movies
+db
+use myFlixDB
+db
+db.getCollectionNames()
+db.createCollection("movies")
+db.collectionName.insertOne(movies)
+db.collectionName.insertOne(myFlixDB)
+use movies
+db
+db.getCollectionNames()
+"movies", "users"
+show dbs
+myFlixDBmyFlixDBmyFlixDBmyFlixDBmyFlixDB
+mongoexport -d myFlixDB -c users -o myFlixDBforUsers.json
+mongoexport -d myFlixDB -c users -o myFlixDBforUsers.json
+SyntaxError: unexpected token: identifier : @(shell):1:15
+mongoexport -d myFlixDB -c movies -o myFlixDBforMovies.json
+db.getCollectionNames()
+db
+show db
+db
+show dbs
+mongoexport -d movies -c users -o myFlixDBforUsers.json
+mongoexport -d movies -c movies -o myFlixDBforMovies.json
+mongoexport -d Movies -c movies -o myFlixDBforMovies.json
+mongoexport -d movies -c Movies -o myFlixDBforMovies.json
+mongoexport 'mongodb+srv://cluster0.example.com/testdb?authSource=$external&authMechanism=MONGODB-AWS'  <other options> export AWS_ACCESS_KEY_ID='<aws access key id>'
+export AWS_ACCESS_KEY_ID='<aws access key id>'
+mongoexport --db=movies
+mongoexport --db=movies --collection=Movies --out=myflix.json
+db
+show dbs
+;
+db.[collectionName].deleteMany([condition])
+db.runCommand( { dropAllUsersFromDatabase: 1 } )
+1
+db
+show dbs
+mongoexport -d movies -c movies -o myFlixDBforMovies.json
+mongoexport -d movies -c Movies -o mylist.json
+mongoexport -d movies -c movies -o mylists.json
+show dbs
+mongoexport -d movies -c movies -o myFlixDBforMovies.json
+db.dropDatabase(movies)
+db.dropDatabase(users)
+db.dropDatabase()
+1
+ok
+db.dropDatabase()
+movies
+db
+use movies
+db.dropDatabase()
+{ w: <value>, j: <boolean>, wtimeout: <number> }
+db.runCommand( { dropDatabase: 1 } )
+1
+2
+db.runCommand( { dropAllUsersFromDatabase: 1 } )
+show dbs
+db.dropDatabase()
+show dbs
+db.runCommand( { dropDatabase: 1 } )
+show dbs
+db.runCommand( { dropAllUsersFromDatabase: 1 } )
+show dbs
+use my FlixDB
+use myFlixDB
+db.dropDatabase()
+show dbs
+show collections
+use movies
+collection_name.drop()
+show dbs
+show collection
+collection_name.drop()
+db.collection.drop()
+use <database_name>
+use movies
+show collections
+show dbs
+db
+show dbs
+use MyFlixDB
+DB
+show dbs
+db
+var movie1 = {   Title: "Interstellar",   Description: " A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",   Genre: {     Name: " Sci-Fi ",     Description: "speculative fiction which typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life. It has been called the literature of ideas, and it often explores the potential consequences of scientific, social, and technological innovations."   },   Director: {     Name: " Christopher Nolan ",     Bio: "Christopher Nolan is an American director, producer, and screenwriter.",     Birth: " 1970-07-30 ",   },   ImagePath: " https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRf61mker2o4KH3CbVE7Zw5B1-VogMH8LfZHEaq3UdCMLxARZAB ",   Featured: true }
+db.movies.insertOne(movie1)
+var movie2 = {         Title: 'The Hobbit',         Description: 'A reluctant Hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home, and the gold within it from the dragon Smaug.',         Director: {             Name:'Peter Jackson',             Bio: 'Peter Jackson is an American director, producer, and screenwriter.',             Birth:'1961-10-31'              } ,         Genre: {             Name:'Fantasy',             Description: 'speculative fiction involving magical elements, typically set in a fictional universe and sometimes inspired by mythology and folklore. Its roots are in oral traditions, which then became fantasy literature and drama. From the twentieth century, it has expanded further into various media, including film, television, graphic novels, manga, animated movies and video games.',         },         ImageUrl:'https://resizing.flixster.com/bvVhpq1XDXo409UQ07ZgFrsIlZ0=/206x305/v2/https://flxt.tmsimg.com/assets/p9458059_p_v8_ac.jpg',         Featured: true     }
+db.movies.insertOne(movie2)
+var movie3 = {         Title: 'Inception',         Description: 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.',         Director: {             Name:'Christopher Nolan',             Bio:'Christopher Nolan is an American director, producer, and screenwriter.',             Birth: '1970-07-30'         },         Genre: {             Name:'Sci-Fi',             Description:' speculative fiction which typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life. It has been called the literature of ideas, and it often explores the potential consequences of scientific, social, and technological innovations.',         },         ImageUrl:'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg',         Featured: true         }
+db.movies.insertOne(movie3)
+var movie4 = {         Title: 'The Shawshank Redemption',         Description: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.',         Director: {             Name: 'Frank Darabont',             Bio: 'Three-time Oscar nominee Frank Darabont was born in a refugee camp in 1959 in Montbeliard, France, the son of Hungarian parents who had fled Budapest during the failed 1956 Hungarian revolution. ',             Birth: '1959-01-28',         },         Genre: {             Name:'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.',         },         ImageUrl: 'https://www.imdb.com/title/tt0111161/mediaviewer/rm10105600/',         Featured: true     }
+db.movies.insertOne(movie4)
+var movie5 = {         Title: 'The Godfather',         Description: 'The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.',         Director: {             Name: 'Francis Ford Coppola',             Bio: 'Francis Ford Coppola was born in 1939 in Detroit, Michigan, but grew up in a New York suburb in a creative, supportive Italian-American family.',             Birth: '1939-07-04' ,         },         Genre: {             Name: 'Crime',             Description: 'FCrime films, in the broadest sense, are a cinematic genre inspired by and analogous to the crime fiction literary genre. Films of this genre generally involve various aspects of crime and its detection.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0068646/mediaviewer/rm746868224/',         Featured: true     }
+db.movies.insertOne(movie5)
+var movie5 = {         Title: 'The Godfather',         Description: 'The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.',         Director: {             Name: 'Francis Ford Coppola',             Bio: 'Francis Ford Coppola was born in 1939 in Detroit, Michigan, but grew up in a New York suburb in a creative, supportive Italian-American family.',             Birth: '1939-07-04' ,         },         Genre: {             Name: 'Crime',             Description: 'FCrime films, in the broadest sense, are a cinematic genre inspired by and analogous to the crime fiction literary genre. Films of this genre generally involve various aspects of crime and its detection.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0068646/mediaviewer/rm746868224/',         Featured: true     }
+db.movies.insertOne(movie5)
+show dbs
+use MyFlixDB
+db.<collection_name>.drop()
+db.dropDatabase()
+show dbs
+use MyflixDB
+var movie1 = {   Title: "Interstellar",   Description: " A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",   Genre: {     Name: " Sci-Fi ",     Description: "speculative fiction which typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life. It has been called the literature of ideas, and it often explores the potential consequences of scientific, social, and technological innovations."   },   Director: {     Name: " Christopher Nolan ",     Bio: "Christopher Nolan is an American director, producer, and screenwriter.",     Birth: " 1970-07-30 ",   },   ImagePath: " https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRf61mker2o4KH3CbVE7Zw5B1-VogMH8LfZHEaq3UdCMLxARZAB ",   Featured: true }
+db.movies.insertOne(movie1)
+ar movie2 = {         Title: 'The Hobbit',         Description: 'A reluctant Hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home, and the gold within it from the dragon Smaug.',         Director: {             Name:'Peter Jackson',             Bio: 'Peter Jackson is an American director, producer, and screenwriter.',             Birth:'1961-10-31'              } ,         Genre: {             Name:'Fantasy',             Description: 'speculative fiction involving magical elements, typically set in a fictional universe and sometimes inspired by mythology and folklore. Its roots are in oral traditions, which then became fantasy literature and drama. From the twentieth century, it has expanded further into various media, including film, television, graphic novels, manga, animated movies and video games.',         },         ImageUrl:'https://resizing.flixster.com/bvVhpq1XDXo409UQ07ZgFrsIlZ0=/206x305/v2/https://flxt.tmsimg.com/assets/p9458059_p_v8_ac.jpg',         Featured: true     }
+db.movies.insertOne(movie2)
+var movie2 = {         Title: 'The Hobbit',         Description: 'A reluctant Hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home, and the gold within it from the dragon Smaug.',         Director: {             Name:'Peter Jackson',             Bio: 'Peter Jackson is an American director, producer, and screenwriter.',             Birth:'1961-10-31'              } ,         Genre: {             Name:'Fantasy',             Description: 'speculative fiction involving magical elements, typically set in a fictional universe and sometimes inspired by mythology and folklore. Its roots are in oral traditions, which then became fantasy literature and drama. From the twentieth century, it has expanded further into various media, including film, television, graphic novels, manga, animated movies and video games.',         },         ImageUrl:'https://resizing.flixster.com/bvVhpq1XDXo409UQ07ZgFrsIlZ0=/206x305/v2/https://flxt.tmsimg.com/assets/p9458059_p_v8_ac.jpg',         Featured: true     }
+db.movies.insertOne(movie2)
+var movie3 = {         Title: 'Inception',         Description: 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.',         Director: {             Name:'Christopher Nolan',             Bio:'Christopher Nolan is an American director, producer, and screenwriter.',             Birth: '1970-07-30'         },         Genre: {             Name:'Sci-Fi',             Description:' speculative fiction which typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life. It has been called the literature of ideas, and it often explores the potential consequences of scientific, social, and technological innovations.',         },         ImageUrl:'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg',         Featured: true         }
+db.movies.insertOne(movie3)
+var movie4 = {         Title: 'The Shawshank Redemption',         Description: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.',         Director: {             Name: 'Frank Darabont',             Bio: 'Three-time Oscar nominee Frank Darabont was born in a refugee camp in 1959 in Montbeliard, France, the son of Hungarian parents who had fled Budapest during the failed 1956 Hungarian revolution. ',             Birth: '1959-01-28',         },         Genre: {             Name:'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.',         },         ImageUrl: 'https://www.imdb.com/title/tt0111161/mediaviewer/rm10105600/',         Featured: true     }
+db.movies.insertOne(movie4)
+var movie5 = {         Title: 'The Godfather',         Description: 'The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.',         Director: {             Name: 'Francis Ford Coppola',             Bio: 'Francis Ford Coppola was born in 1939 in Detroit, Michigan, but grew up in a New York suburb in a creative, supportive Italian-American family.',             Birth: '1939-07-04' ,         },         Genre: {             Name: 'Crime',             Description: 'FCrime films, in the broadest sense, are a cinematic genre inspired by and analogous to the crime fiction literary genre. Films of this genre generally involve various aspects of crime and its detection.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0068646/mediaviewer/rm746868224/',         Featured: true     }
+db.movies.insertOne(movie5)
+var movie06 = {         Title: ' Pulp Fiction',         Description: 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption',         Director: {             Name: 'Quentin Tarantino',             Bio: 'Quentin Jerome Tarantino was born in Knoxville, Tennessee. His father, Tony Tarantino, is an Italian-American actor and musician from New York, and his mother, Connie (McHugh), is a nurse from Tennessee.',             Birth: '1963-03-27' ,         },         Genre: {             Name: 'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0110912/mediaviewer/rm1959546112/',         Featured: true     }
+db.movies.insertOne(movie06)
+var movie7 = {         Title: 'Forrest Gump',         Description: 'The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.',         Director:              Name: 'Robert Zemeckis',             Bio: 'A whiz-kid with special effects, Robert is from the Spielberg camp of film-making (Steven Spielberg produced many of his films). ',             Birth: '1951-05-14',         },             Name: 'Romance',             Description: 'Romance films or romance movies are romantic love stories recorded in visual media for broadcast in theaters and on TV that focus on passion, emotion, and the affectionate romantic involvement of the main characters and the journey that their love takes them through dating, courtship or marriage.',         },
+ImageUrl: 'https://www.imdb.com/title/tt0109830/mediaviewer/rm1954748672/',         Featured: true
+}
+db.movies.insertOne(movie7)
+var movie7 = {         Title: 'Forrest Gump',         Description: 'The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.',         Director:              Name: 'Robert Zemeckis',             Bio: 'A whiz-kid with special effects, Robert is from the Spielberg camp of film-making (Steven Spielberg produced many of his films). ',             Birth: '1951-05-14',         },             Name: 'Romance',             Description: 'Romance films or romance movies are romantic love stories recorded in visual media for broadcast in theaters and on TV that focus on passion, emotion, and the affectionate romantic involvement of the main characters and the journey that their love takes them through dating, courtship or marriage.',         },
+ImageUrl: 'https://www.imdb.com/title/tt0109830/mediaviewer/rm1954748672/',         Featured: true
+}
+;
+var movie7 = {         Title: 'Forrest Gump',         Description: 'The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.',         Director:              Name: 'Robert Zemeckis',             Bio: 'A whiz-kid with special effects, Robert is from the Spielberg camp of film-making (Steven Spielberg produced many of his films). ',             Birth: '1951-05-14',         },             Name: 'Romance',             Description: 'Romance films or romance movies are romantic love stories recorded in visual media for broadcast in theaters and on TV that focus on passion, emotion, and the affectionate romantic involvement of the main characters and the journey that their love takes them through dating, courtship or marriage.',         },
+ImageUrl: 'https://www.imdb.com/title/tt0109830/mediaviewer/rm1954748672/',         Featured: true
+}
+db.movies.insertOne(movie7)
+var movie7 = {         Title: 'Forrest Gump',         Description: 'The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.',         Director: {             Name: 'Robert Zemeckis',             Bio: 'A whiz-kid with special effects, Robert is from the Spielberg camp of film-making (Steven Spielberg produced many of his films). ',             Birth: '1951-05-14',         },             Name: 'Romance',             Description: 'Romance films or romance movies are romantic love stories recorded in visual media for broadcast in theaters and on TV that focus on passion, emotion, and the affectionate romantic involvement of the main characters and the journey that their love takes them through dating, courtship or marriage.',         },         ImageUrl: 'https://www.imdb.com/title/tt0109830/mediaviewer/rm1954748672/',         Featured: true
+}
+db.movies.insertOne(movie7)
+var movie7 = {         Title: 'Forrest Gump',         Description: 'The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.',         Director: {             Name: 'Robert Zemeckis',             Bio: 'A whiz-kid with special effects, Robert is from the Spielberg camp of film-making (Steven Spielberg produced many of his films). ',             Birth: '1951-05-14',         },          Genre: {             Name: 'Romance',             Description: 'Romance films or romance movies are romantic love stories recorded in visual media for broadcast in theaters and on TV that focus on passion, emotion, and the affectionate romantic involvement of the main characters and the journey that their love takes them through dating, courtship or marriage.',         },         ImageUrl: 'https://www.imdb.com/title/tt0109830/mediaviewer/rm1954748672/',         Featured: true         }
+db.movies.insertOne(movie7)
+var movie8 = {   Title: "Silence of the Lambs",   Description: "A young FBI cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer.",   Genre: {     Name: "Thriller",     Description: "Thriller film, also known as suspense film or suspense thriller, is a broad film genre that involves excitement and suspense in the audience."   },   Director: {     Name: "Jonathan Demme",     Bio: "Robert Jonathan Demme was an American director, producer, and screenwriter.",     Birth: "1944",     Death: "2017"   },    ImageUrl: 'https://www.imdb.com/title/tt0102926/mediaviewer/rm3242988544/',         Featured: true         }
+db.movies.insertOne(movie8)
+var movie9 = {         Title: 'Se7en',         Description: 'Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.',         Director: {             Name: 'David Fincher',             Bio: '. When he was 18 years old he went to work for John Korty at Korty Films in Mill Valley.',             Birth: '1962-08-28' ,         },         Genre: {             Name: 'Mystery',             Description: 'A mystery film is a genre of film that revolves around the solution of a problem or a crime.',         },         ImageUrl: 'https://www.imdb.com/title/tt0114369/mediaviewer/rm3116368640/',         Featured: true         }
+db.movies.insertOne(movie9)
+var movie10 = {         Title: ' Pulp Fiction',         Description: 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption',         Director: {             Name: 'Quentin Tarantino',             Bio: 'Quentin Jerome Tarantino was born in Knoxville, Tennessee. His father, Tony Tarantino, is an Italian-American actor and musician from New York, and his mother, Connie (McHugh), is a nurse from Tennessee.',             Birth: '1963-03-27' ,         },         Genre: {             Name: 'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0110912/mediaviewer/rm1959546112/',         Featured: true     }
+db.movies.insertOne(movie10)
+db.collection.save(    <document>,    {      writeConcern: <document>    } )
+show dbs
+MyflixDB  0.000G
+var movie10 = {         Title: ' Pulp Fiction',         Description: 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption',         Director: {             Name: 'Quentin Tarantino',             Bio: 'Quentin Jerome Tarantino was born in Knoxville, Tennessee. His father, Tony Tarantino, is an Italian-American actor and musician from New York, and his mother, Connie (McHugh), is a nurse from Tennessee.',             Birth: '1963-03-27' ,         },         Genre: {             Name: 'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0110912/mediaviewer/rm1959546112/',         Featured: true     }
+db.movies.insertOne(movie10)
+var movie10 = {         Title: ' Pulp Fiction',         Description: 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption',         Director: {             Name: 'Quentin Tarantino',             Bio: 'Quentin Jerome Tarantino was born in Knoxville, Tennessee. His father, Tony Tarantino, is an Italian-American actor and musician from New York, and his mother, Connie (McHugh), is a nurse from Tennessee.',             Birth: '1963-03-27' ,         },         Genre: {             Name: 'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0110912/mediaviewer/rm1959546112/',         Featured: true     }
+db.movies.insertOne(movie10)
+var movie10 = {         Title: ' Pulp Fiction',         Description: 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption',         Director: {             Name: 'Quentin Tarantino',             Bio: 'Quentin Jerome Tarantino was born in Knoxville, Tennessee. His father, Tony Tarantino, is an Italian-American actor and musician from New York, and his mother, Connie (McHugh), is a nurse from Tennessee.',             Birth: '1963-03-27' ,         },         Genre: {             Name: 'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0110912/mediaviewer/rm1959546112/',         Featured: true     }
+db.movies.insertOne(movie10)
+var movie10 = {         Title: ' Pulp Fiction',         Description: 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption',         Director: {             Name: 'Quentin Tarantino',             Bio: 'Quentin Jerome Tarantino was born in Knoxville, Tennessee. His father, Tony Tarantino, is an Italian-American actor and musician from New York, and his mother, Connie (McHugh), is a nurse from Tennessee.',             Birth: '1963-03-27' ,         },         Genre: {             Name: 'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0110912/mediaviewer/rm1959546112/',         Featured: true     }
+db.movies.insertOne(movie10)
+db.collection.save(    <document>,    {      writeConcern: <document>    } )
+db.getCollectionNames()
+save
+db.listCollections()
+use MyflixDB
+db.dropDatabase()
+show dbs
+use MyflixDB
+show dbs
+use MyflixDB
+var movie1 = {   Title: "Interstellar",   Description: " A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",   Genre: {     Name: " Sci-Fi ",     Description: "speculative fiction which typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life. It has been called the literature of ideas, and it often explores the potential consequences of scientific, social, and technological innovations."   },   Director: {     Name: " Christopher Nolan ",     Bio: "Christopher Nolan is an American director, producer, and screenwriter.",     Birth: " 1970-07-30 ",   },   ImagePath: " https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRf61mker2o4KH3CbVE7Zw5B1-VogMH8LfZHEaq3UdCMLxARZAB ",   Featured: true }
+db.movies.insertOne(movie1)
+var movie2 = {         Title: 'The Hobbit',         Description: 'A reluctant Hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home, and the gold within it from the dragon Smaug.',         Director: {             Name:'Peter Jackson',             Bio: 'Peter Jackson is an American director, producer, and screenwriter.',             Birth:'1961-10-31'              } ,         Genre: {             Name:'Fantasy',             Description: 'speculative fiction involving magical elements, typically set in a fictional universe and sometimes inspired by mythology and folklore. Its roots are in oral traditions, which then became fantasy literature and drama. From the twentieth century, it has expanded further into various media, including film, television, graphic novels, manga, animated movies and video games.',         },         ImageUrl:'https://resizing.flixster.com/bvVhpq1XDXo409UQ07ZgFrsIlZ0=/206x305/v2/https://flxt.tmsimg.com/assets/p9458059_p_v8_ac.jpg',         Featured: true     }
+db.movies.insertOne(movie2)
+var movie3 = {         Title: 'Inception',         Description: 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.',         Director: {             Name:'Christopher Nolan',             Bio:'Christopher Nolan is an American director, producer, and screenwriter.',             Birth: '1970-07-30'         },         Genre: {             Name:'Sci-Fi',             Description:' speculative fiction which typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life. It has been called the literature of ideas, and it often explores the potential consequences of scientific, social, and technological innovations.',         },         ImageUrl:'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg',         Featured: true         }
+db.movies.insertOne(movie3)
+var movie4 = {         Title: 'The Shawshank Redemption',         Description: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.',         Director: {             Name: 'Frank Darabont',             Bio: 'Three-time Oscar nominee Frank Darabont was born in a refugee camp in 1959 in Montbeliard, France, the son of Hungarian parents who had fled Budapest during the failed 1956 Hungarian revolution. ',             Birth: '1959-01-28',         },         Genre: {             Name:'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.',         },         ImageUrl: 'https://www.imdb.com/title/tt0111161/mediaviewer/rm10105600/',         Featured: true     }
+db.movies.insertOne(movie4)
+var movie5 = {         Title: 'The Godfather',         Description: 'The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.',         Director: {             Name: 'Francis Ford Coppola',             Bio: 'Francis Ford Coppola was born in 1939 in Detroit, Michigan, but grew up in a New York suburb in a creative, supportive Italian-American family.',             Birth: '1939-07-04' ,         },         Genre: {             Name: 'Crime',             Description: 'FCrime films, in the broadest sense, are a cinematic genre inspired by and analogous to the crime fiction literary genre. Films of this genre generally involve various aspects of crime and its detection.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0068646/mediaviewer/rm746868224/',         Featured: true     }
+db.movies.insertOne(movie5)
+var movie06 = {         Title: ' Pulp Fiction',         Description: 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption',         Director: {             Name: 'Quentin Tarantino',             Bio: 'Quentin Jerome Tarantino was born in Knoxville, Tennessee. His father, Tony Tarantino, is an Italian-American actor and musician from New York, and his mother, Connie (McHugh), is a nurse from Tennessee.',             Birth: '1963-03-27' ,         },         Genre: {             Name: 'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0110912/mediaviewer/rm1959546112/',         Featured: true     }
+db.movies.insertOne(movie06)
+var movie7 = {         Title: 'Forrest Gump',         Description: 'The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.',         Director: {             Name: 'Robert Zemeckis',             Bio: 'A whiz-kid with special effects, Robert is from the Spielberg camp of film-making (Steven Spielberg produced many of his films). ',             Birth: '1951-05-14',         },          Genre: {             Name: 'Romance',             Description: 'Romance films or romance movies are romantic love stories recorded in visual media for broadcast in theaters and on TV that focus on passion, emotion, and the affectionate romantic involvement of the main characters and the journey that their love takes them through dating, courtship or marriage.',         },         ImageUrl: 'https://www.imdb.com/title/tt0109830/mediaviewer/rm1954748672/',         Featured: true         }
+db.movies.insertOne(movie7)
+var movie8 = {   Title: "Silence of the Lambs",   Description: "A young FBI cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer.",   Genre: {     Name: "Thriller",     Description: "Thriller film, also known as suspense film or suspense thriller, is a broad film genre that involves excitement and suspense in the audience."   },   Director: {     Name: "Jonathan Demme",     Bio: "Robert Jonathan Demme was an American director, producer, and screenwriter.",     Birth: "1944",     Death: "2017"   },    ImageUrl: 'https://www.imdb.com/title/tt0102926/mediaviewer/rm3242988544/',         Featured: true         }
+db.movies.insertOne(movie8)
+var movie9 = {         Title: 'Se7en',         Description: 'Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.',         Director: {             Name: 'David Fincher',             Bio: '. When he was 18 years old he went to work for John Korty at Korty Films in Mill Valley.',             Birth: '1962-08-28' ,         },         Genre: {             Name: 'Mystery',             Description: 'A mystery film is a genre of film that revolves around the solution of a problem or a crime.',         },         ImageUrl: 'https://www.imdb.com/title/tt0114369/mediaviewer/rm3116368640/',         Featured: true         }
+db.movies.insertOne(movie9)
+var movie10 = {         Title: ' Pulp Fiction',         Description: 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption',         Director: {             Name: 'Quentin Tarantino',             Bio: 'Quentin Jerome Tarantino was born in Knoxville, Tennessee. His father, Tony Tarantino, is an Italian-American actor and musician from New York, and his mother, Connie (McHugh), is a nurse from Tennessee.',             Birth: '1963-03-27' ,         },         Genre: {             Name: 'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0110912/mediaviewer/rm1959546112/',         Featured: true     }
+db.movies.insertOne(movie10)
+show dbs
+show dbs
+use MyflixDB
+mongoexport -d myFlixDB -c movies -o myFlixDBforMovies.json
+show dbs
+use MyflixDB
+db.dropDatabase()
+show dbs
+db.createCollection("movies")
+db.collectionName.insertOne(MyflixDB)
+show dbs
+db.Collection()
+db.createCollection("movies")
+[movies]  0.000GBdb.dropDatabase()
+db.dropDatabase()
+show dbs
+db.movies.insertOne(MyflixDB)
+use MyflixDB
+db.movies.insertOne(MyflixDB)
+show dbs
+ahow dbs
+show dbs
+myFlixDB
+db.getCollectionNames()
+db.createCollection("collectionName")
+show dbs
+use test
+db.dropDatabase()
+show dbs
+use movies
+db.dropDatabase()
+show dbs
+db.[collectionName].find()
+use movies
+db.[collectionName].find()
+var movie1 = {   Title: "Interstellar",   Description: " A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",   Genre: {     Name: " Sci-Fi ",     Description: "speculative fiction which typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life. It has been called the literature of ideas, and it often explores the potential consequences of scientific, social, and technological innovations."   },   Director: {     Name: " Christopher Nolan ",     Bio: "Christopher Nolan is an American director, producer, and screenwriter.",     Birth: " 1970-07-30 ",   },   ImagePath: " https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRf61mker2o4KH3CbVE7Zw5B1-VogMH8LfZHEaq3UdCMLxARZAB ",   Featured: true }
+db.movies.insertOne(movie1)
+var movie2 = {         Title: 'The Hobbit',         Description: 'A reluctant Hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home, and the gold within it from the dragon Smaug.',         Director: {             Name:'Peter Jackson',             Bio: 'Peter Jackson is an American director, producer, and screenwriter.',             Birth:'1961-10-31'              } ,         Genre: {             Name:'Fantasy',             Description: 'speculative fiction involving magical elements, typically set in a fictional universe and sometimes inspired by mythology and folklore. Its roots are in oral traditions, which then became fantasy literature and drama. From the twentieth century, it has expanded further into various media, including film, television, graphic novels, manga, animated movies and video games.',         },         ImageUrl:'https://resizing.flixster.com/bvVhpq1XDXo409UQ07ZgFrsIlZ0=/206x305/v2/https://flxt.tmsimg.com/assets/p9458059_p_v8_ac.jpg',         Featured: true     }
+db.movies.insertOne(movie2)
+var movie3 = {         Title: 'Inception',         Description: 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.',         Director: {             Name:'Christopher Nolan',             Bio:'Christopher Nolan is an American director, producer, and screenwriter.',             Birth: '1970-07-30'         },         Genre: {             Name:'Sci-Fi',             Description:' speculative fiction which typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life. It has been called the literature of ideas, and it often explores the potential consequences of scientific, social, and technological innovations.',         },         ImageUrl:'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg',         Featured: true         }
+db.movies.insertOne(movie3)
+var movie4 = {         Title: 'The Shawshank Redemption',         Description: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.',         Director: {             Name: 'Frank Darabont',             Bio: 'Three-time Oscar nominee Frank Darabont was born in a refugee camp in 1959 in Montbeliard, France, the son of Hungarian parents who had fled Budapest during the failed 1956 Hungarian revolution. ',             Birth: '1959-01-28',         },         Genre: {             Name:'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.',         },         ImageUrl: 'https://www.imdb.com/title/tt0111161/mediaviewer/rm10105600/',         Featured: true     }
+db.movies.insertOne(movie4)
+var movie5 = {         Title: 'The Godfather',         Description: 'The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.',         Director: {             Name: 'Francis Ford Coppola',             Bio: 'Francis Ford Coppola was born in 1939 in Detroit, Michigan, but grew up in a New York suburb in a creative, supportive Italian-American family.',             Birth: '1939-07-04' ,         },         Genre: {             Name: 'Crime',             Description: 'FCrime films, in the broadest sense, are a cinematic genre inspired by and analogous to the crime fiction literary genre. Films of this genre generally involve various aspects of crime and its detection.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0068646/mediaviewer/rm746868224/',         Featured: true     }
+db.movies.insertOne(movie5)
+var movie06 = {         Title: ' Pulp Fiction',         Description: 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption',         Director: {             Name: 'Quentin Tarantino',             Bio: 'Quentin Jerome Tarantino was born in Knoxville, Tennessee. His father, Tony Tarantino, is an Italian-American actor and musician from New York, and his mother, Connie (McHugh), is a nurse from Tennessee.',             Birth: '1963-03-27' ,         },         Genre: {             Name: 'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0110912/mediaviewer/rm1959546112/',         Featured: true     }
+db.movies.insertOne(movie06)
+var movie7 = {         Title: 'Forrest Gump',         Description: 'The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.',         Director: {              Name: 'Robert Zemeckis',             Bio: 'A whiz-kid with special effects, Robert is from the Spielberg camp of film-making (Steven Spielberg produced many of his films). ',             Birth: '1951-05-14',         },             Name: 'Romance',             Description: 'Romance films or romance movies are romantic love stories recorded in visual media for broadcast in theaters and on TV that focus on passion, emotion, and the affectionate romantic involvement of the main characters and the journey that their love takes them through dating, courtship or marriage.',         },         ImageUrl: 'https://www.imdb.com/title/tt0109830/mediaviewer/rm1954748672/',         Featured: true
+}
+db.movies.insertOne(movie7)
+var movie8 = {   Title: "Silence of the Lambs",   Description: "A young FBI cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer.",   Genre: {     Name: "Thriller",     Description: "Thriller film, also known as suspense film or suspense thriller, is a broad film genre that involves excitement and suspense in the audience."   },   Director: {     Name: "Jonathan Demme",     Bio: "Robert Jonathan Demme was an American director, producer, and screenwriter.",     Birth: "1944",     Death: "2017"   },    ImageUrl: 'https://www.imdb.com/title/tt0102926/mediaviewer/rm3242988544/',         Featured: true         }
+db.movies.insertOne(movie8)
+var movie9 = {         Title: 'Se7en',         Description: 'Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.',         Director: {             Name: 'David Fincher',             Bio: '. When he was 18 years old he went to work for John Korty at Korty Films in Mill Valley.',             Birth: '1962-08-28' ,         },         Genre: {             Name: 'Mystery',             Description: 'A mystery film is a genre of film that revolves around the solution of a problem or a crime.',         },         ImageUrl: 'https://www.imdb.com/title/tt0114369/mediaviewer/rm3116368640/',         Featured: true         }
+db.movies.insertOne(movie9)
+var movie10 = {         Title: ' Pulp Fiction',         Description: 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption',         Director: {             Name: 'Quentin Tarantino',             Bio: 'Quentin Jerome Tarantino was born in Knoxville, Tennessee. His father, Tony Tarantino, is an Italian-American actor and musician from New York, and his mother, Connie (McHugh), is a nurse from Tennessee.',             Birth: '1963-03-27' ,         },         Genre: {             Name: 'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0110912/mediaviewer/rm1959546112/',         Featured: true     }
+db.movies.insertOne(movie10)
+show dbs
+use movies
+db.[collectionName].find()
+db.[movies].find()
+db.movies.find()
+db.movies.find().pretty()
+use movies
+db.dropDatabase()
+show dbs
+db.movies.find().pretty()
+use movies
+var movie1 = {   Title: "Interstellar",   Description: " A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",   Genre: {     Name: " Sci-Fi ",     Description: "speculative fiction which typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life. It has been called the literature of ideas, and it often explores the potential consequences of scientific, social, and technological innovations."   },   Director: {     Name: " Christopher Nolan ",     Bio: "Christopher Nolan is an American director, producer, and screenwriter.",     Birth: " 1970-07-30 ",   },   ImagePath: " https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRf61mker2o4KH3CbVE7Zw5B1-VogMH8LfZHEaq3UdCMLxARZAB ",   Featured: true }
+db.movies.insertOne(movie1)
+var movie2 = {         Title: 'The Hobbit',         Description: 'A reluctant Hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home, and the gold within it from the dragon Smaug.',         Director: {             Name:'Peter Jackson',             Bio: 'Peter Jackson is an American director, producer, and screenwriter.',             Birth:'1961-10-31'              } ,         Genre: {             Name:'Fantasy',             Description: 'speculative fiction involving magical elements, typically set in a fictional universe and sometimes inspired by mythology and folklore. Its roots are in oral traditions, which then became fantasy literature and drama. From the twentieth century, it has expanded further into various media, including film, television, graphic novels, manga, animated movies and video games.',         },         ImageUrl:'https://resizing.flixster.com/bvVhpq1XDXo409UQ07ZgFrsIlZ0=/206x305/v2/https://flxt.tmsimg.com/assets/p9458059_p_v8_ac.jpg',         Featured: true     }
+db.movies.insertOne(movie2)
+var movie3 = {         Title: 'Inception',         Description: 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.',         Director: {             Name:'Christopher Nolan',             Bio:'Christopher Nolan is an American director, producer, and screenwriter.',             Birth: '1970-07-30'         },         Genre: {             Name:'Sci-Fi',             Description:' speculative fiction which typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life. It has been called the literature of ideas, and it often explores the potential consequences of scientific, social, and technological innovations.',         },         ImageUrl:'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg',         Featured: true         }
+db.movies.insertOne(movie3)
+var movie4 = {         Title: 'The Shawshank Redemption',         Description: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.',         Director: {             Name: 'Frank Darabont',             Bio: 'Three-time Oscar nominee Frank Darabont was born in a refugee camp in 1959 in Montbeliard, France, the son of Hungarian parents who had fled Budapest during the failed 1956 Hungarian revolution. ',             Birth: '1959-01-28',         },         Genre: {             Name:'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.',         },         ImageUrl: 'https://www.imdb.com/title/tt0111161/mediaviewer/rm10105600/',         Featured: true     }
+db.movies.insertOne(movie4)
+var movie5 = {         Title: 'The Godfather',         Description: 'The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.',         Director: {             Name: 'Francis Ford Coppola',             Bio: 'Francis Ford Coppola was born in 1939 in Detroit, Michigan, but grew up in a New York suburb in a creative, supportive Italian-American family.',             Birth: '1939-07-04' ,         },         Genre: {             Name: 'Crime',             Description: 'FCrime films, in the broadest sense, are a cinematic genre inspired by and analogous to the crime fiction literary genre. Films of this genre generally involve various aspects of crime and its detection.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0068646/mediaviewer/rm746868224/',         Featured: true     }
+db.movies.insertOne(movie5)
+var movie06 = {         Title: ' Pulp Fiction',         Description: 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption',         Director: {             Name: 'Quentin Tarantino',             Bio: 'Quentin Jerome Tarantino was born in Knoxville, Tennessee. His father, Tony Tarantino, is an Italian-American actor and musician from New York, and his mother, Connie (McHugh), is a nurse from Tennessee.',             Birth: '1963-03-27' ,         },         Genre: {             Name: 'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0110912/mediaviewer/rm1959546112/',         Featured: true     }
+db.movies.insertOne(movie06)
+var movie7 = {         Title: 'Forrest Gump',         Description: 'The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.',         Director: {              Name: 'Robert Zemeckis',             Bio: 'A whiz-kid with special effects, Robert is from the Spielberg camp of film-making (Steven Spielberg produced many of his films). ',             Birth: '1951-05-14',         },             Name: 'Romance',             Description: 'Romance films or romance movies are romantic love stories recorded in visual media for broadcast in theaters and on TV that focus on passion, emotion, and the affectionate romantic involvement of the main characters and the journey that their love takes them through dating, courtship or marriage.',         },         ImageUrl: 'https://www.imdb.com/title/tt0109830/mediaviewer/rm1954748672/',         Featured: true
+}
+db.movies.insertOne(movie7)
+var movie8 = {   Title: "Silence of the Lambs",   Description: "A young FBI cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer.",   Genre: {     Name: "Thriller",     Description: "Thriller film, also known as suspense film or suspense thriller, is a broad film genre that involves excitement and suspense in the audience."   },   Director: {     Name: "Jonathan Demme",     Bio: "Robert Jonathan Demme was an American director, producer, and screenwriter.",     Birth: "1944",     Death: "2017"   },    ImageUrl: 'https://www.imdb.com/title/tt0102926/mediaviewer/rm3242988544/',         Featured: true         }
+db.movies.insertOne(movie8)
+var movie9 = {         Title: 'Se7en',         Description: 'Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.',         Director: {             Name: 'David Fincher',             Bio: '. When he was 18 years old he went to work for John Korty at Korty Films in Mill Valley.',             Birth: '1962-08-28' ,         },         Genre: {             Name: 'Mystery',             Description: 'A mystery film is a genre of film that revolves around the solution of a problem or a crime.',         },         ImageUrl: 'https://www.imdb.com/title/tt0114369/mediaviewer/rm3116368640/',         Featured: true         }
+db.movies.insertOne(movie9)
+var movie10 = {         Title: ' Pulp Fiction',         Description: 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption',         Director: {             Name: 'Quentin Tarantino',             Bio: 'Quentin Jerome Tarantino was born in Knoxville, Tennessee. His father, Tony Tarantino, is an Italian-American actor and musician from New York, and his mother, Connie (McHugh), is a nurse from Tennessee.',             Birth: '1963-03-27' ,         },         Genre: {             Name: 'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0110912/mediaviewer/rm1959546112/',         Featured: true     }
+db.movies.insertOne(movie10)
+use movies
+db.dropDatabase()
+use movies
+var movie1 = {   Title: "Interstellar",   Description: " A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",   Genre: {     Name: " Sci-Fi ",     Description: "speculative fiction which typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life. It has been called the literature of ideas, and it often explores the potential consequences of scientific, social, and technological innovations."   },   Director: {     Name: " Christopher Nolan ",     Bio: "Christopher Nolan is an American director, producer, and screenwriter.",     Birth: " 1970-07-30 ",   },   ImagePath: " https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRf61mker2o4KH3CbVE7Zw5B1-VogMH8LfZHEaq3UdCMLxARZAB ",   Featured: true }
+db.movies.insertOne(movie1)
+var movie2 = {         Title: 'The Hobbit',         Description: 'A reluctant Hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home, and the gold within it from the dragon Smaug.',         Director: {             Name:'Peter Jackson',             Bio: 'Peter Jackson is an American director, producer, and screenwriter.',             Birth:'1961-10-31'              } ,         Genre: {             Name:'Fantasy',             Description: 'speculative fiction involving magical elements, typically set in a fictional universe and sometimes inspired by mythology and folklore. Its roots are in oral traditions, which then became fantasy literature and drama. From the twentieth century, it has expanded further into various media, including film, television, graphic novels, manga, animated movies and video games.',         },         ImageUrl:'https://resizing.flixster.com/bvVhpq1XDXo409UQ07ZgFrsIlZ0=/206x305/v2/https://flxt.tmsimg.com/assets/p9458059_p_v8_ac.jpg',         Featured: true     }
+db.movies.insertOne(movie2)
+var movie3 = {         Title: 'Inception',         Description: 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.',         Director: {             Name:'Christopher Nolan',             Bio:'Christopher Nolan is an American director, producer, and screenwriter.',             Birth: '1970-07-30'         },         Genre: {             Name:'Sci-Fi',             Description:' speculative fiction which typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life. It has been called the literature of ideas, and it often explores the potential consequences of scientific, social, and technological innovations.',         },         ImageUrl:'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg',         Featured: true         }
+db.movies.insertOne(movie3)
+var movie4 = {         Title: 'The Shawshank Redemption',         Description: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.',         Director: {             Name: 'Frank Darabont',             Bio: 'Three-time Oscar nominee Frank Darabont was born in a refugee camp in 1959 in Montbeliard, France, the son of Hungarian parents who had fled Budapest during the failed 1956 Hungarian revolution. ',             Birth: '1959-01-28',         },         Genre: {             Name:'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.',         },         ImageUrl: 'https://www.imdb.com/title/tt0111161/mediaviewer/rm10105600/',         Featured: true     }
+db.movies.insertOne(movie4)
+var movie5 = {         Title: 'The Godfather',         Description: 'The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.',         Director: {             Name: 'Francis Ford Coppola',             Bio: 'Francis Ford Coppola was born in 1939 in Detroit, Michigan, but grew up in a New York suburb in a creative, supportive Italian-American family.',             Birth: '1939-07-04' ,         },         Genre: {             Name: 'Crime',             Description: 'FCrime films, in the broadest sense, are a cinematic genre inspired by and analogous to the crime fiction literary genre. Films of this genre generally involve various aspects of crime and its detection.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0068646/mediaviewer/rm746868224/',         Featured: true     }
+db.movies.insertOne(movie5)
+var movie06 = {         Title: ' Pulp Fiction',         Description: 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption',         Director: {             Name: 'Quentin Tarantino',             Bio: 'Quentin Jerome Tarantino was born in Knoxville, Tennessee. His father, Tony Tarantino, is an Italian-American actor and musician from New York, and his mother, Connie (McHugh), is a nurse from Tennessee.',             Birth: '1963-03-27' ,         },         Genre: {             Name: 'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0110912/mediaviewer/rm1959546112/',         Featured: true     }
+db.movies.insertOne(movie06)
+var movie7 = {         Title: 'Forrest Gump',         Description: 'The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.',         Director: {              Name: 'Robert Zemeckis',             Bio: 'A whiz-kid with special effects, Robert is from the Spielberg camp of film-making (Steven Spielberg produced many of his films). ',             Birth: '1951-05-14',         },           Genre: {             Name: 'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone',         },         ImageUrl: 'https://www.imdb.com/title/tt0109830/mediaviewer/rm1954748672/',         Featured: true         }
+db.movies.insertOne(movie7)
+var movie8 = {   Title: "Silence of the Lambs",   Description: "A young FBI cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer.",   Genre: {     Name: "Thriller",     Description: "Thriller film, also known as suspense film or suspense thriller, is a broad film genre that involves excitement and suspense in the audience."   },   Director: {     Name: "Jonathan Demme",     Bio: "Robert Jonathan Demme was an American director, producer, and screenwriter.",     Birth: "1944",     Death: "2017"   },    ImageUrl: 'https://www.imdb.com/title/tt0102926/mediaviewer/rm3242988544/',         Featured: true         }
+db.movies.insertOne(movie8)
+var movie9 = {         Title: 'Se7en',         Description: 'Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.',         Director: {             Name: 'David Fincher',             Bio: '. When he was 18 years old he went to work for John Korty at Korty Films in Mill Valley.',             Birth: '1962-08-28' ,         },         Genre: {             Name: 'Mystery',             Description: 'A mystery film is a genre of film that revolves around the solution of a problem or a crime.',         },         ImageUrl: 'https://www.imdb.com/title/tt0114369/mediaviewer/rm3116368640/',         Featured: true         }
+db.movies.insertOne(movie9)
+var movie10 = {         Title: ' Pulp Fiction',         Description: 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption',         Director: {             Name: 'Quentin Tarantino',             Bio: 'Quentin Jerome Tarantino was born in Knoxville, Tennessee. His father, Tony Tarantino, is an Italian-American actor and musician from New York, and his mother, Connie (McHugh), is a nurse from Tennessee.',             Birth: '1963-03-27' ,         },         Genre: {             Name: 'Drama',             Description: 'In film and television, drama is a category of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.' ,         },         ImageUrl: 'https://www.imdb.com/title/tt0110912/mediaviewer/rm1959546112/',         Featured: true     }
+db.movies.insertOne(movie10)
+db.movies.find().pretty()
+use movies
+db.movies.find().pretty()
+use users
+let user1 = {           name: "Maria Manson",           password: "klo788",           email: "maria.manson@gmail.com",           dateOfBirth: "1980/01/02",           favoriteMovies: [],         }
+db.users.insertOne(user1)
+let user2 = {           name: "Ana Smith",           password: "ups88",           email: "ana.smitt@yahoo.com",           dateOfBirth: "1988/02/05" ,                     }
+db.users.insertOne(user2)
+let user3 = {             name: "Melani Cruz",             password: "upsmc5588",             email: 'melc@yahoo.com' ,             Birthday: new Date("1981-09-01") ,              favoriteMovies: ["We are not angels"],           }
+db.users.insertOne(user3)
+let user4 = {             name: "Fiona Cruz",             password: "ups88",             email: 'fcruz@yahoo.com' ,             Birthday: new Date("1981-08-01")           }
+db.users.insertOne(user4)
+let user5 = {             name: "David Beckham",             password: "beckhampower55",             email: 'davidb@yahoo.com' ,             Birthday: new Date("1985-10-15")           }
+db.users.insertOne(user5)
+show dbs
+;
+db.users.find().pretty()
+mongoexport -d myFlixDB -c users -o myFlixDBforUsers.json
+mongoexport -d movies -c users -o myFlixDBforUsers.json
+show dbs
+.find()
+db.movies.findOne( { Title: "Silence of the Lambs" } )
+use movies
+db.movies.findOne( { Title: "Silence of the Lambs" } )
+"_id" : ObjectId("6277afa0f8a8199d4e365e65"),         "Title" : "Silence of the Lambs",         "Description" : "A young FBI cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer.",         "Genre" : {                 "Name" : "Thriller",                 "Description" : "Thriller film, also known as suspense film or suspense thriller, is a broad film genre that involves excitement and suspense in the audience."         },         "Director" : {                 "Name" : "Jonathan Demme",                 "Bio" : "Robert Jonathan Demme was an American director, producer, and screenwriter.",                 "Birth" : "1944",                 "Death" : "2017"         },         "ImageUrl" : "https://www.imdb.com/title/tt0102926/mediaviewer/rm3242988544/",         "Featured" : true
+db.movies.find({ "Genre.Name": "Drama" })
+{ "_id" : ObjectId("6277afa0f8a8199d4e365e61"), "Title" : "The Shjson_export = docs.to_json() # return JSON data
+print ("nJSON data:", json_export)
+json_export = docs.to_json() # return JSON data
+print ("nJSON data:", json_export)
+json_export = docs.to_json() # return JSON data
+mongoexport -d movies -c users -o myFlixDBforUsers.json
+mongoexport -d myFlixDB -c movies -o myFlixDBforMovies.json
+mongoexport -d movies -c myflixdb -o new.json
+mongoexport -d movies -c movies -o new.json
+use movies
+mongoexport -d .dbshell -c movies -o myFlixDBforUsers.json

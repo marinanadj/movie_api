@@ -1,0 +1,5 @@
+{"_id":{"$oid":"627e6156ebbe1d7a8e99acde"},"username":"MManson","password":"klo788","email":"maria.manson@gmail.com","dateOfBirth":"1980/01/02","favoriteMovies":[]}
+{"_id":{"$oid":"627e615eebbe1d7a8e99acdf"},"username":"ASmith","password":"ups88","email":"ana.smitt@yahoo.com","dateOfBirth":"1988/02/05"}
+{"_id":{"$oid":"627e6166ebbe1d7a8e99ace0"},"username":"MelaniC","password":"upsmc5588","email":"melc@yahoo.com","Birthday":{"$date":"1981-09-01T00:00:00Z"},"favoriteMovies":["The Hobbits"]}
+{"_id":{"$oid":"627e6175ebbe1d7a8e99ace1"},"username":"Fions","password":"ups88","email":"fcruz@yahoo.com","Birthday":{"$date":"1981-08-01T00:00:00Z"}}
+{"_id":{"$oid":"627e6182ebbe1d7a8e99ace2"},"username":"DaviB","password":"beckhampower55","email":"davidb@yahoo.com","Birthday":{"$date":"1985-10-15T00:00:00Z"}}

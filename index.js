@@ -11,12 +11,14 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
+const passport = require('passport');
+require('./passport');
+let auth = require('./auth')(app);
 
 
 // import built in node modules fs and path 
 const morgan = require('morgan');
-      fs = require('fs'), 
-      path = require('path');
+      (fs = require('fs')), (path = require('path'));
 
       mongoose = require('mongoose');
       Models = require ('./models');
@@ -24,11 +26,9 @@ const morgan = require('morgan');
 //mongoose models
 const Movies = Models.Movie;
 const Users = Models.User;
-const Genres = Models.Genre;
-const Directors = Models.Director;
 
 //connection with Mongo database
-mongoose.connect('mongodb://localhost:27017/myFlixDb', { 
+mongoose.connect('mongodb://localhost:27017/myFlixDB', { 
 useNewUrlParser: true, 
 useUnifiedTopology: true,
 });
@@ -45,7 +45,7 @@ app.use(express.static('public'));
 
   //ADDING ENDPOINDS FOR OUR API
 
-  //Allow new user creation with post method
+  //Allow new user registration with post method
   app.post ('/users', (req, res) => {
      Users.findOne({ Username: req.body.Username })
      .then ((user) => {
@@ -84,7 +84,7 @@ app.use(express.static('public'));
   });
 
   //get a user by Username
-  app.get('/users/:Username', (req, res) => {
+  app.get('/users/:Username', passport.authenticate("jwt", { session: false}), (req, res) => {
       Users.findOne({ Username: req.params.Username })
          .then((user) => {
            res.json(user);
@@ -97,8 +97,8 @@ app.use(express.static('public'));
 
 
   // Update user's details as Password
-  app.put('/users/:Username', (req, res) => {
-      Users.findOneAndUpdate ({ Password: req.params.Password }, {$set:
+  app.put('/users/:Username', passport.authenticate("jwt", { session: false }), (req, res) => {
+      Users.findOneAndUpdate ({ Username: req.params.Username }, {$set:
           {
               Username: req.body.Username,
               Password: req.body.Password,
@@ -118,10 +118,11 @@ app.use(express.static('public'));
   });
 
   //users to add a movie to their list of favorites
-  app.post('/users/:Username/movies/:MovieID', (req, res) => {     
+  app.post('/users/:Username/movies/:MovieID', passport.authenticate("jwt", { session: false }),
+   (req, res) => {     
       Users.findOneAndUpdate({ Username: req.params.Username },
           {
-              $push: { favoriteMovies: req.params.MovieID }
+              $push: { FavoriteMovies: req.params.MovieID }
           },
           { new: true},
           (err, updatedUser) => {
@@ -135,21 +136,33 @@ app.use(express.static('public'));
   });
 
   //User delete movie from fav list
-  app.delete('/users/:Username/favouriteMovie/:movieID', (req, res) => {
-      Users.findOneAndUpdate({ Username: req.params.Username },
-          { $pull: { favoriteMovies: req.params.movieID} 
-      })
-    .then((updatedUser) => {
+           app.delete("/users/:Username/movies/:movieID", passport.authenticate("jwt", { session: false }),
+      (req, res) => {
+       Users.findOneAndUpdate(
+         { Username: req.params.Username },
+         { $pull: { FavoriteMovies: req.params.movieID } }
+    )
+      .then((updatedUser) => {
         Movies.findOne({ _id: req.params.movieID }).then((movie) => {
-         res.send('The movie \'' + movie.Title + '\' has been successfully removed from your list of favourites.');
-  })
-  }) .catch((err) => {
-      console.error(err);
-      res.status(500).send('Error: ' + err);
-    });
+          res.json({
+            message:
+              "The movie '" +
+              movie.Title +
+              "' has been successfully removed from your list of favourites.",
+            user: updatedUser,
+          });
+        });
+      })
+      .catch((err) => {
+        console.error(err);
+        res.status(500).send("Error: " + err);
+      });
+  }
+);
+
 
   //User deleted from api
-  app.delete('/users/:Username', (req, res) => {
+  app.delete('/users/:Username',passport.authenticate("jwt", { session: false }), (req, res) => {
       Users.findOneAndRemove({ Username: req.params.Username })
           .then((user) => {
               if (!user) {
@@ -163,7 +176,6 @@ app.use(express.static('public'));
               res.status(500).send('Error: ' + err);
           });
   });
-});
 
   //Read functions for MOVIES
 
@@ -173,7 +185,7 @@ app.use(express.static('public'));
   });
   
   //Return a list of ALL movies
-  app.get('/movies',(req, res) => {
+  app.get('/movies', passport.authenticate('jwt', { session: false }), (req, res) => {
       Movies.find()
       .then((movies)  => {
           res.status(201).json(movies);
@@ -185,7 +197,7 @@ app.use(express.static('public'));
   });
 
   // Single movie by title
-  app.get('/movies/:Title', (req, res) => {
+  app.get('/movies/:Title', passport.authenticate('jwt', { session: false }), (req, res) => {
       Movies.find({ Title: req.params.Title }) 
       .then(movie => {
           console.log('You are searching for a movie named ' + req.params.Title);
@@ -198,23 +210,23 @@ app.use(express.static('public'));
          
 
  // Return data about a genre (description) by name/title
- app.get('/movies/genre/:Name', (req, res) => {
-     Movies.findOne({ genreName: req.params.genreName})
+ app.get('/movies/genre/:Name', passport.authenticate('jwt', { session: false }),  (req, res) => {
+     Movies.findOne({ "GenreName": req.params.Name})
      .then(movie => {
-         Genres.findById(movie.Genre)
-         .then(genre => {
-             res.status(200).json(genre);
+      if (!movie) return res.status(404).send('Genre ${req.params.Name} has not been found.');
+             res.status(200).json(movie);
          })
-         .catch((err) => console.error(err));
- });
+         .catch((err) => res.status(500).send(err.message));
  });
 
  // Directors name
-  app.get('/movies/director/:Name', (req, res) => {
-      Directors.findOne({ Name: req.params.Name })
-      .then((director) => { res.json(director);
+  app.get('/movies/director/:Name', passport.authenticate('jwt', { session: false }), (req, res) => {
+      Movies.findOne({ "DirectorName" : req.params.Name })
+      .then((movie) => {
+          if (!movie) return res.status(404).send('Director ${req.params.Name} has not been found.');
+          res.json(movie);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => res.status(500).send(err.message));
   });
 
   //returns documentation page from static public folder

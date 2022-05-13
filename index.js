@@ -28,7 +28,7 @@ const Genres = Models.Genre;
 const Directors = Models.Director;
 
 //connection with Mongo database
-mongoose.connect('mongodb://localhost:27017/myFlixDB', { 
+mongoose.connect('mongodb://localhost:27017/myFlixDb', { 
 useNewUrlParser: true, 
 useUnifiedTopology: true,
 });
@@ -173,7 +173,7 @@ app.use(express.static('public'));
   });
   
   //Return a list of ALL movies
-  app.get('/movies', passport.authenticate('jwt', { session: false }), (req, res) => {
+  app.get('/movies',(req, res) => {
       Movies.find()
       .then((movies)  => {
           res.status(201).json(movies);
@@ -185,7 +185,7 @@ app.use(express.static('public'));
   });
 
   // Single movie by title
-  app.get('/movies/:Title', passport.authenticate('jwt', { session: false }), (req, res) => {
+  app.get('/movies/:Title', (req, res) => {
       Movies.find({ Title: req.params.Title }) 
       .then(movie => {
           console.log('You are searching for a movie named ' + req.params.Title);
@@ -198,7 +198,7 @@ app.use(express.static('public'));
          
 
  // Return data about a genre (description) by name/title
- app.get('/movies/genre/:Name', passport.authenticate('jwt', { session: false }),  (req, res) => {
+ app.get('/movies/genre/:Name', (req, res) => {
      Movies.findOne({ genreName: req.params.genreName})
      .then(movie => {
          Genres.findById(movie.Genre)
@@ -210,7 +210,7 @@ app.use(express.static('public'));
  });
 
  // Directors name
-  app.get('/movies/director/:Name', passport.authenticate('jwt', { session: false }), (req, res) => {
+  app.get('/movies/director/:Name', (req, res) => {
       Directors.findOne({ Name: req.params.Name })
       .then((director) => { res.json(director);
       })

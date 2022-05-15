@@ -10,10 +10,9 @@ const port = process.env.PORT || 8080;
 
 const { check, validationResult } = require('express-validator');
  
-let allowedOrigins = ['http://localhost:8080', 'http://localhost:1234', 'https://marinanadj-53303.herokuapp.com/'];
+// mongoose.connect('mongodb://localhost:27017/[myFlixDB]', { useNewUrlParser: true, useUnifiedTopology: true });
 
-mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
-
+mongoose.connect(process.env.CONNECTION_URI || "mongodb://localhost:27017/[myFlixDB]", { useNewUrlParser: true, useUnifiedTopology: true });
 
 const morgan = require('morgan'),
    bodyParser = require('body-parser'),

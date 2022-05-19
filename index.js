@@ -2,7 +2,7 @@ const express = require('express');
 const app = express(); 
 
 const mongoose = require('mongoose');
-const Models = require('./model.js'); 
+const Models = require('./models.js'); 
 const cors = require('cors');
 const Movies = Models.Movie;
 const Users = Models.User;

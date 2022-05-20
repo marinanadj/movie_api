@@ -12,8 +12,9 @@ const { check, validationResult } = require('express-validator');
  
 // mongoose.connect('mongodb://localhost:27017/[myFlixDB]', { useNewUrlParser: true, useUnifiedTopology: true });
 
-mongoose.connect("mongodb+srv://admin:Pass@022@myflixdb.f1d5x.mongodb.net/myFlixDB?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
 
+
+mongoose.connect('mongodb+srv://admin:admin123@cluster0.nhu3w.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
 const morgan = require('morgan'),
    bodyParser = require('body-parser'),

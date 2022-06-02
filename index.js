@@ -14,7 +14,7 @@ const { check, validationResult } = require('express-validator');
 
 
 
-mongoose.connect(process.env.CONNECTION_URI || "mongodb+srv://newadmin:marinko7@db.f1d5x.mongodb.net/myFlixDB?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect ("mongodb+srv://newadmin:marinko7@db.f1d5x.mongodb.net/myFlixDB?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
 
 const morgan = require('morgan'),
    bodyParser = require('body-parser'),

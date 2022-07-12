@@ -1,5 +1,5 @@
-##MOVIE API
-##Project details
+## MOVIE API
+## Project details
 The project aimed to create a RESTful API that execute CRUD operations regarding a movie database. We have built the server-side component of a “movies” web application. It will provide users with access to information about different movies, directors, and genres. Users will be able to sign up, update their personal information, and create a list of their favorite movies.
 
 ##Tech stack

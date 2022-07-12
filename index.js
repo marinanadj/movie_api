@@ -186,6 +186,51 @@ app.delete('/users/:Username', passport.authenticate('jwt', { session: false}), 
     });
 });
 
+
+// CREATE: Allow users to add a movie to their list of favorites
+app.post('/users/:Username/movies/:MovieID', passport.authenticate('jwt', { session: false }), (req, res) => {
+  Users.findOneAndUpdate({ Username: req.params.Username }, // Find user by username
+    { $push: { FavoriteMovies: req.params.MovieID } }, // Add movie to the list
+    { new: true }) // Return the updated document
+    .then((updatedUser) => {
+      res.json(updatedUser); // Return json object of updatedUser
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send('Error: ' + err);
+    });
+});
+
+// READ: Get a list of favorite movies from the user
+app.get('/users/:Username/movies', passport.authenticate('jwt', { session: false }), (req, res) => {
+  Users.findOne({ Username: req.params.Username })
+    .then((user) => {
+      if (user) { // If a user with the corresponding username was found, return user info
+        res.status(200).json(user.FavoriteMovies);
+      } else {
+        res.status(400).send('Could not find favorite movies for this user');
+      };
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send('Error: ' + err);
+    });
+});
+
+
+// DELETE: Allow users to remove a movie from their list of favorites
+app.delete('/users/:Username/movies/:MovieID', passport.authenticate('jwt', { session: false }), (req, res) => {
+  Users.findOneAndUpdate({ Username: req.params.Username }, // Find user by username
+    { $pull: { FavoriteMovies: req.params.MovieID } }, // Remove movie from the list
+    { new: true }) // Return the updated document
+    .then((updatedUser) => {
+      res.json(updatedUser); // Return json object of updatedUser
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send('Error: ' + err);
+    });
+});
 //Read
 app.get("/", (req, res) => {
     res.send("Welcome to myFlix")

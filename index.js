@@ -195,7 +195,7 @@ app.post('/users/:Username/movies/:MovieID', passport.authenticate('jwt', { sess
     .then((updatedUser) => {
       res.json(updatedUser); // Return json object of updatedUser
     })
-    .catch((err) => {
+    .catch((err) => {git push heroku main
       console.error(err);
       res.status(500).send('Error: ' + err);
     });

@@ -187,10 +187,10 @@ app.delete('/users/:Username', passport.authenticate('jwt', { session: false}), 
 });
 
 
-// CREATE: Allow users to add a movie to their list of favorites
+// CREATE: Allow users to add a movie to their list of favourites
 app.post('/users/:Username/movies/:MovieID', passport.authenticate('jwt', { session: false }), (req, res) => {
   Users.findOneAndUpdate({ Username: req.params.Username }, // Find user by username
-    { $push: { FavoriteMovies: req.params.MovieID } }, // Add movie to the list
+    { $push: { FavouriteMovies: req.params.MovieID } }, // Add movie to the list
     { new: true }) // Return the updated document
     .then((updatedUser) => {
       res.json(updatedUser); // Return json object of updatedUser
@@ -201,14 +201,14 @@ app.post('/users/:Username/movies/:MovieID', passport.authenticate('jwt', { sess
     });
 });
 
-// READ: Get a list of favorite movies from the user
+// READ: Get a list of favourite movies from the user
 app.get('/users/:Username/movies', passport.authenticate('jwt', { session: false }), (req, res) => {
   Users.findOne({ Username: req.params.Username })
     .then((user) => {
       if (user) { // If a user with the corresponding username was found, return user info
-        res.status(200).json(user.FavoriteMovies);
+        res.status(200).json(user.FavouriteMovies);
       } else {
-        res.status(400).send('Could not find favorite movies for this user');
+        res.status(400).send('Could not find favourite movies for this user');
       };
     })
     .catch((err) => {
@@ -218,10 +218,10 @@ app.get('/users/:Username/movies', passport.authenticate('jwt', { session: false
 });
 
 
-// DELETE: Allow users to remove a movie from their list of favorites
+// DELETE: Allow users to remove a movie from their list of favourites
 app.delete('/users/:Username/movies/:MovieID', passport.authenticate('jwt', { session: false }), (req, res) => {
   Users.findOneAndUpdate({ Username: req.params.Username }, // Find user by username
-    { $pull: { FavoriteMovies: req.params.MovieID } }, // Remove movie from the list
+    { $pull: { FavouriteMovies: req.params.MovieID } }, // Remove movie from the list
     { new: true }) // Return the updated document
     .then((updatedUser) => {
       res.json(updatedUser); // Return json object of updatedUser

@@ -6,6 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
+  
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/marinanadj/movie_api.git"
@@ -27,7 +29,7 @@
     "lodash": "^4.17.21",
     "mongoose": "^6.3.3",
     "morgan": "^1.10.0",
-    "passport": "^0.5.2",
+    "passport": "^0.6.0",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
     "save": "^2.5.0",
@@ -35,6 +37,7 @@
   },
   "keywords": [],
   "devDependencies": {
-    "nodemon": "^2.0.16"
+    "jsdoc": "^3.6.10",
+    "nodemon": "^1.4.1"
   }
 }
